@@ -29,3 +29,19 @@ Manier om onderscheid te maken in soorten data.
 - Console
 - Functies
 - HTML elementen (queryselector)
+
+Wat zijn arrays?
+Een lijst. De lijst gebruikt []
+
+### Functies
+= Wanneer de code wordt uitgevoerd. 
+Je groepeert code als iets moet gebeuren wanneer je iets doet. Functie start schrijf je zo bijvoorbeeld: function groet() {}
+
+### Eventlisteners
+Met eventlisteners kan je gebruiken om functies werkend te maken.
+
+### If else
+Het is een conditioneel statement. We hebben ze zodat we conditie in code kunnen schrijven. Je kan doen: doet dit wanneer dat dat is of dat zo. 
+
+### Parameters
+Parameter is belangrijke feature van functies. Parameters is zodat we code niet vaak hoeven te herschrijven. 
