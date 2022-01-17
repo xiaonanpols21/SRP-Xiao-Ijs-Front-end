@@ -1,0 +1,33 @@
+body,html{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	background: #000;
+}
+
+body{
+	text-align: center;
+	padding-top: 10em;
+}
+p#score, p#scoreTwee{
+	background-color: lightcoral;
+	width: 2em;
+	margin: auto;
+	padding: 3em 1em;
+	margin-bottom: 1em;
+}
+
+body.winning{
+	background-image: url(../images/confetti.gif);
+	background-repeat: no-repeat;
+	background-position: bottom;
+	background-size: cover;
+}
+
+.bg {
+	background-color: blue;
+}
+
+.green {
+	background-color: green;
+}
