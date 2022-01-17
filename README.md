@@ -49,3 +49,6 @@ Het is een conditioneel statement. We hebben ze zodat we conditie in code kunnen
 Parameter is belangrijke feature van functies. Parameters is zodat we code niet vaak hoeven te herschrijven. 
 
 </details>
+
+## JavaScript W3Schools
+Om JavaScript beter onder de knie te krijgen heb ik de volgende oegening gedaan: https://www.w3schools.com/js/exercise_js.asp?filename=exercise_js_variables1
