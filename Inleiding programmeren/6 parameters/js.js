@@ -13,8 +13,6 @@ function stoplicht(kleur) {
     else {
         console.log("gassen");
     } 
-
-    h1El.textContent = kleur;
 }
 
-stoplicht("");
+stoplicht("rood");
