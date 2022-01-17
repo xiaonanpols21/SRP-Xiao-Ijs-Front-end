@@ -5,6 +5,7 @@ Dit is voor mijn SRP opdracht: Xiaoco Ijs werkend maken
 Hier zal ik mijn kennis opfrissen door de kennisclips terug te gaan kijken. In de readme zal ik alleen de aantekeningen maken. 
 
 <details>
+
 ### Variabelen
 Variabelen = doos
 Doos heeft label, zodat je weet wat erin zit. 
@@ -46,4 +47,5 @@ Het is een conditioneel statement. We hebben ze zodat we conditie in code kunnen
 
 ### Parameters
 Parameter is belangrijke feature van functies. Parameters is zodat we code niet vaak hoeven te herschrijven. 
+
 </details>
