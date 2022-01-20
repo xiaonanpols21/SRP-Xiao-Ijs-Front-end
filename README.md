@@ -2,7 +2,7 @@
 Dit is voor mijn SRP opdracht: Xiaoco Ijs werkend maken
 
 ## Inleiding programmeren
-Hier zal ik mijn kennis opfrissen door de kennisclips terug te gaan kijken. In de readme zal ik alleen de aantekeningen maken. 
+Hier zal ik mijn kennis opfrissen door de kennisclips terug te gaan kijken en de opdrachten maken. In de readme zal ik de aantekeningen maken. Gemaakte opdrachten zijn te zien in mapje: Inleiding programmeren.
 
 <details>
 
@@ -50,5 +50,5 @@ Parameter is belangrijke feature van functies. Parameters is zodat we code niet 
 
 </details>
 
-## JavaScript W3Schools
-Om JavaScript beter onder de knie te krijgen heb ik de volgende oefening gedaan: https://www.w3schools.com/js/exercise_js.asp?filename=exercise_js_dom_html9
+## JS boek Duckett
+Om JavaScript beter onder de knie te krijgen, maak ik oefeningen van het boek Duckett die ik in jaar 1 las voor het beter begrijpen van JavaScript. Gemaakte opdrachten staan in het mapje: Duckett.
