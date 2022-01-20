@@ -51,4 +51,4 @@ Parameter is belangrijke feature van functies. Parameters is zodat we code niet 
 </details>
 
 ## JavaScript W3Schools
-Om JavaScript beter onder de knie te krijgen heb ik de volgende oegening gedaan: https://www.w3schools.com/js/exercise_js.asp?filename=exercise_js_dom_html9
+Om JavaScript beter onder de knie te krijgen heb ik de volgende oefening gedaan: https://www.w3schools.com/js/exercise_js.asp?filename=exercise_js_dom_html9
