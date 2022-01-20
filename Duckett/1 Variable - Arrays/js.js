@@ -37,4 +37,32 @@ var elNote3 = document.getElementById("note-3");
 elNote3.innerHTML = message3;
 // Deze opdracht is om een quote te gebruiken in een string.
 
+// S-4
+var inStock;
+var shipping;
+inStock = true;
+shipping = false;
 
+var elStock = document.getElementById("stock");
+elStock.className = inStock;
+
+var elShip = document.getElementById("shipping");
+elShip.className = shipping;
+// Met de boolean wordt laten zien dat de één true is en de andere false. Resultaat wordt niet laten zien, maar ik weet wel wat er mee wordt bedoeld. 
+
+// Je kan op verschillende manieren variablen aanmaken. 
+var inStock;
+var shipping;
+inStock = true;
+shipping = false;
+
+// of
+
+var inStock = true;
+var shipping = false;
+
+// of
+
+var inStock, shipping;
+inStock = true;
+shipping = false;
