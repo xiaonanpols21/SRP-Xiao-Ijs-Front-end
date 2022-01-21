@@ -49,28 +49,29 @@ el6.textContent = welcomeMessage;
 
 // S-7 
 var greeting7 = "Howdy";
-var greet7 = document.querySelector(".message");
+var greet7 = document.querySelector("#message-7");
+
+var currentName = "Molly";
+var name7 = document.querySelector("#name-7");
+
+var customSign = "Montague House",
+    toalTiles = 14;
+    subtotal6 = 2.50;
+    shipping6 = 7;
+    grandTotal = (toalTiles * subtotal6) + shipping6;
+
+var c1 = document.querySelector("#custom-sign"),
+    c2 = document.querySelector("#total-tiles"),
+    c3 = document.querySelector("#subtotal"),
+    c4 = document.querySelector("#shipping"),
+    c5 = document.querySelector("#grand-total");
+
 greet7.textContent = greeting7;
-
-var customSign, totalTiles, subtotal6, shipping6, grandTotal;
-var c1, c2, c3, c4, c5;
-
-c1 = document.getElementById("custom-sign");
-c2 = document.getElementById("total-tiles");
-c3 = document.getElementById("subtotal");
-c4 = document.getElementById("shipping");
-c5 = document.getElementById("grand-total");
+name7.textContent = currentName;
 
 c1.textContent = customSign;
-c2.textContent = totalTiles;
+c2.textContent = toalTiles;
 c3.textContent = subtotal6;
 c4.textContent = shipping6;
 c5.textContent = grandTotal;
-
-customSign = "Montague House";
-totalTiles = 14;
-subtotal6 = 2.50;
-shipping6 = 7;
-grandTotal = (totalTiles * subtotal6) + shipping6;
-// Voor mijn gevoel zou dit goed moeten zijn. Maar krijg niks te zien op de pagina.
-
+// Deze code is zelf geschreven om te zien of ik een optel som kon maken en tekst kon veranderen in de HTML
