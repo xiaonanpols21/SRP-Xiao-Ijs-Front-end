@@ -1,0 +1,16 @@
+* {
+    margin: 0px;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+}
+
+main {
+    width: 507px;
+    height: 900px;
+    background-color: black;
+    border: 1px solid black;
+}
