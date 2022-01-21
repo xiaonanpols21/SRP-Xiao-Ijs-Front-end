@@ -26,12 +26,16 @@ a {
     text-decoration: none;
 }
 
-/* Startpagina Index.html */
 main {
     width: 507px;
     height: 100vh;
     margin: auto;
     padding: 20px;
+    background-color: var(--white-color);
+}
+
+/* Startpagina Index.html */
+.start-main {
     position: relative;
     align-items: center;
     background: url(img/bg.jpg) right center no-repeat;
