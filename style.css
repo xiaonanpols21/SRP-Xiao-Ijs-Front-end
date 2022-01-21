@@ -10,7 +10,12 @@ body {
 
 main {
     width: 507px;
-    height: 900px;
+    height: 100vh;
     background-color: black;
-    border: 1px solid black;
+}
+
+@media only screen and (min-height: 900px) {
+    main {
+        height: 900px;
+    }
 }
