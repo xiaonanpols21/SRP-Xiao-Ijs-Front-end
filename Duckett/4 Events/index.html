@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="s-1">
+        <!-- Dit is een manier om het NIET te doen -->
+        <form method="post" action="https://www.example.org/register">
+            <label for="username">Create a username:</label>
+            <input type="text" id="username" onblur="checkUsername()" />
+            <div id="feedback"></div>
+
+            <label for="password">Create password:</label>
+            <input type="password" id="password" />
+            <input type="submit" value="Sign up" />
+        </form>
+    </section>
+    <script src="js.js"></script>
+</body>
+</html>
