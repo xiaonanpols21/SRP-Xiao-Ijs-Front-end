@@ -13,6 +13,7 @@
 
     --dark-purple-color: #836E99;
     --dark-green-color: #4999A4;
+    --dark-pink-color: #DB9AA7;
 
     --pink-15: #FEF3F5;
     --green-25: rgba(92, 193, 207, 0.25);
@@ -97,6 +98,11 @@ h3 {
     font-weight: bold;
     font-size: 18px;
     color: var(--white-color);
+    cursor: pointer;
+}
+
+.btn-2:active {
+    background-color: var(--dark-pink-color);
 }
 
 /* Startpagina Index.html */
@@ -219,14 +225,15 @@ header {
 .content {
     display: grid;
     grid-template-columns: 120px 1fr;
+    height: calc(100% - 123px);
 }
 
 nav {
     position: relative;
     display: flex;
     margin-left: -10px;
-    margin-top: -30px;
     padding: 10px;
+    height: fit-content;
     border-radius: 0px 20px 20px 0px;
     background-color: var(--green-25);
 }
@@ -240,6 +247,7 @@ nav {
 }
 
 nav ul {
+    height: fit-content;
     list-style: none;
 }
 
@@ -251,6 +259,11 @@ nav ul li {
     text-align: center;
     align-items: center;
     transform: translateY(20px);
+    cursor: pointer;
+}
+
+nav ul li:last-of-type {
+    margin-bottom: 0px;
 }
 
 nav ul li img:first-of-type, nav ul li p {
@@ -283,6 +296,21 @@ nav ul li:nth-of-type(3) img:first-of-type {
     width: 105px;
 }
 
+@keyframes jump-animation {
+    0% {
+        transform:translateY(0px);
+      }
+    100% {
+        transform:translateY(-2px);
+    }
+}
+
+nav ul li:active {
+    animation-name:jump-animation;
+    animation-duration:0.5s;
+    animation-iteration-count:1;
+}
+
 /* Bureaublad */
 .bureaublad {
     position: relative;
@@ -307,7 +335,50 @@ nav ul li:nth-of-type(3) img:first-of-type {
 footer {
     position: absolute;
     bottom: 0;
-    left: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: calc(100% - 10px);
+}
+
+.bar-clmn {
+    margin-right: 30px;
+}
+
+.bar {
+    width: 200px;
+    height: 1px;
+    border: 3px solid var(--green-color);
+    border-radius: 50px;
+    background-color: var(--green-color);
+}
+
+.bar-txt {
+    display: flex;
+    justify-content: space-between;
+}
+
+.bar-txt p {
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.bar-dot {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    transform: translateY(4px);
+}
+
+.bar-dot li:last-of-type {
+
+}
+
+.dot {
+    width: 5px;
+    height: 5px;
+    border-radius: 50px;
+    background-color: var(--pink-color);
 }
 
 /* Responsive */
