@@ -15,6 +15,7 @@
     --dark-green-color: #4999A4;
 
     --pink-15: #FEF3F5;
+    --green-25: rgba(92, 193, 207, 0.25);
 
     --white-color: white;
     --black-color: black;
@@ -33,11 +34,23 @@ main {
     width: 507px;
     height: 100vh;
     margin: auto;
-    padding: 20px;
+    padding: 10px;
     background-color: var(--white-color);
 }
 
 /* Font style */
+h1 {
+    font-size: 26px;
+    line-height: 31px;
+}
+
+h2 {
+    font-size: 24px;
+    line-height: 40px;
+    font-weight: normal;
+}
+
+
 h3 {
     font-size: 20px;
     line-height: 33px;
@@ -52,6 +65,38 @@ h3 {
     white-space: nowrap;
     width: 1px;
     /* Bron: https://css-tricks.com/inclusively-hidden/ */
+}
+
+/* Buttons */
+.btn-1 {
+    padding: 30px 40px;
+    display: block;
+    position: absolute;
+    left: 20px;
+    right: 20px;
+    bottom: 70px;
+    border-radius: 50px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 42px;
+    font-weight: bold;
+    text-align: center;
+    color: var(--white-color);
+    background-color: var(--purple-color);
+}
+
+.btn-1:active {
+    background-color: var(--dark-purple-color);
+}
+
+.btn-2 {
+    padding: 20px 30px;
+    border-radius: 50px;
+    border: none;
+    background-color: var(--pink-color);
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    color: var(--white-color);
 }
 
 /* Startpagina Index.html */
@@ -81,25 +126,6 @@ h3 {
     transform: translate(-50%, -50%);
 }
 
-.btn-1 {
-    padding: 30px 40px;
-    display: block;
-    position: absolute;
-    left: 20px;
-    right: 20px;
-    bottom: 70px;
-    border-radius: 50px;
-    font-size: 42px;
-    font-weight: bold;
-    text-align: center;
-    color: var(--white-color);
-    background-color: var(--purple-color);
-}
-
-.btn-1:active {
-    background-color: var(--dark-purple-color);
-}
-
 /* Dashboard */
 .logo {
     height: 68px;
@@ -119,7 +145,7 @@ header {
     display: flex;
     align-items: center;
     padding: 5px 10px;
-    width: 220px;
+    width: 230px;
     border-radius: 50px;
     background: linear-gradient(90deg, rgba(163,137,191,0.5) 0%, rgba(163,137,191,0.25) 100%);
     /* Bron: https://cssgradient.io/ */
@@ -131,6 +157,7 @@ header {
 }
 
 .special-naam {
+    margin-bottom: 5px;
     font-size: 18px;
 }
 
@@ -157,6 +184,7 @@ header {
     height: 15px;
 }
 
+/* Winkelmand */
 .winkelmand-btn {
     padding: 15px;
     border: none;
@@ -187,6 +215,100 @@ header {
     background-color: var(--pink-15);
 }
 
+/* Nav */
+.content {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+}
+
+nav {
+    position: relative;
+    display: flex;
+    margin-left: -10px;
+    margin-top: -30px;
+    padding: 10px;
+    border-radius: 0px 20px 20px 0px;
+    background-color: var(--green-25);
+}
+
+.nav-feed {
+    position: absolute;
+    left: 100%;
+    margin-left: -3px;
+    /* top: 50%;
+    transform: translateY(-50%); */
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    position: relative;
+    display: flex;
+    margin-bottom: 20px;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    transform: translateY(20px);
+}
+
+nav ul li img:first-of-type, nav ul li p {
+    transform: translateY(-30px);
+    color: var(--white-color);
+}
+
+nav ul li p {
+    order: 3;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.nav-img {
+    position: absolute;
+    height: 78px;
+}
+
+nav ul li:first-of-type img:first-of-type {
+    height: 65px;
+    transform: translateY(-15px);
+}
+
+nav ul li:nth-of-type(3) img:first-of-type {
+    height: 68px;
+    transform: translateY(-10px);
+}
+
+.nav-bg {
+    width: 105px;
+}
+
+/* Bureaublad */
+.bureaublad {
+    position: relative;
+    padding: 10px;
+}
+.bureaublad h1, .bureaublad h2 {
+    text-align: center;
+}
+
+.bureaublad h1 {
+    margin-top: 20px
+}
+
+.bureaublad p {
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: right;
+}
+
+/* Footer */
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
 
 /* Responsive */
 @media only screen and (min-height: 900px) {
