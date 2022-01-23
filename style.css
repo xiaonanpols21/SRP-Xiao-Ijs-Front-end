@@ -5,13 +5,16 @@
 }
 
 :root {
-    --bg-color: rgba(244, 169, 184, 0.50);
+    --bg-color: rgba(244, 171, 186, 0.50);
 
     --pink-color: #F4ABBA;
     --green-color: #5CC1CF;
     --purple-color: #B89BC9;
 
     --dark-purple-color: #836E99;
+    --dark-green-color: #4999A4;
+
+    --pink-15: #FEF3F5;
 
     --white-color: white;
     --black-color: black;
@@ -32,6 +35,23 @@ main {
     margin: auto;
     padding: 20px;
     background-color: var(--white-color);
+}
+
+/* Font style */
+h3 {
+    font-size: 20px;
+    line-height: 33px;
+}
+
+.visually-hidden {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    /* Bron: https://css-tricks.com/inclusively-hidden/ */
 }
 
 /* Startpagina Index.html */
@@ -79,6 +99,94 @@ main {
 .btn-1:active {
     background-color: var(--dark-purple-color);
 }
+
+/* Dashboard */
+.logo {
+    height: 68px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Special dagdeal */
+.special-clmn {
+    text-align: center;
+}
+
+.special-btn-clmn {
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    width: 220px;
+    border-radius: 50px;
+    background: linear-gradient(90deg, rgba(163,137,191,0.5) 0%, rgba(163,137,191,0.25) 100%);
+    /* Bron: https://cssgradient.io/ */
+}
+
+.special-img {
+    height: 68px;
+    margin-right: 10px;
+}
+
+.special-naam {
+    font-size: 18px;
+}
+
+.special-txt p {
+    font-size: 14px;
+}
+
+.special-btn {
+    padding: 13px;
+    margin-left: auto;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--green-color);
+    cursor: pointer;
+}
+
+.special-btn:active {
+    background-color: var(--dark-green-color);
+}
+
+.special-btn img {
+    height: 15px;
+}
+
+.winkelmand-btn {
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(90deg, rgba(252,234,238,1) 0%, rgba(249,213,220,1) 100%);
+    cursor: pointer;
+}
+
+.winkelmand-btn:active {
+    background: linear-gradient(90deg, rgba(249,213,220,1) 0%, rgba(252,234,238,1) 100%);
+}
+
+.winkelmand-btn img {
+    width: 45px;
+}
+
+.winkelmand p {
+    font-size: 20px;
+    line-height: 31px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.winkelmand div {
+    margin-top: -7px;
+    padding: 14px 0px 7px 0px;
+    border-radius: 0px 0px 10px 10px;
+    background-color: var(--pink-15);
+}
+
 
 /* Responsive */
 @media only screen and (min-height: 900px) {
