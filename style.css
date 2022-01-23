@@ -392,6 +392,11 @@ footer {
     color: var(--pink-color);
 }
 
+/* Bureaublad */
+.stap-1-img {
+    height: 77px;
+}
+
 /* Responsive */
 @media only screen and (min-height: 900px) {
     main {
