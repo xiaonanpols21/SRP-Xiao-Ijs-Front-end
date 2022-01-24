@@ -32,6 +32,7 @@ a {
 }
 
 main {
+    position: relative;
     width: 507px;
     height: 100vh;
     margin: auto;
@@ -225,13 +226,13 @@ header {
 .content {
     display: grid;
     grid-template-columns: 120px 1fr;
-    height: calc(100% - 123px);
+    height: fit-content ;
 }
 
 nav {
     position: relative;
     display: flex;
-    margin-left: -10px;
+    margin: -40px 0px 0px -10px;
     padding: 10px;
     height: fit-content;
     border-radius: 0px 20px 20px 0px;
@@ -254,7 +255,7 @@ nav ul {
 nav ul li {
     position: relative;
     display: flex;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     flex-direction: column;
     text-align: center;
     align-items: center;
@@ -266,29 +267,30 @@ nav ul li:last-of-type {
     margin-bottom: 0px;
 }
 
-nav ul li img:first-of-type, nav ul li p {
-    transform: translateY(-30px);
-    color: var(--white-color);
+nav ul li img:first-of-type {
+    transform: translateY(-15px);
 }
 
 nav ul li p {
     order: 3;
+    transform: translateY(-30px);
     font-size: 14px;
     font-weight: bold;
+    color: var(--white-color);
 }
 
 .nav-img {
     position: absolute;
-    height: 78px;
+    height: 65px;
 }
 
 nav ul li:first-of-type img:first-of-type {
-    height: 65px;
-    transform: translateY(-15px);
+    height: 50px;
+    transform: translateY(-5px);
 }
 
 nav ul li:nth-of-type(3) img:first-of-type {
-    height: 68px;
+    height: 55px;
     transform: translateY(-10px);
 }
 
@@ -334,15 +336,15 @@ nav ul li:active {
 /* Footer */
 footer {
     position: absolute;
-    bottom: 0;
+    padding-left: inherit;
+    padding-right: inherit;
+    bottom: 10px;
+    left: 0px;
+    right: 0px;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
-    width: calc(100% - 10px);
-}
-
-.bar-clmn {
-    margin-right: 30px;
+    width: 100%;
 }
 
 .bar {
@@ -356,6 +358,7 @@ footer {
 .bar-txt {
     display: flex;
     justify-content: space-between;
+    margin-top: 5px;
 }
 
 .bar-txt p {
@@ -450,6 +453,24 @@ figcaption {
     height: 45px;
 }
 
+/* JS code */
+/* Footer knop links weg */
+.none {
+    display: none;
+}
+
+.footer1Btn {
+    justify-content: flex-end;
+}
+
+.marginR30 {
+    margin-right: 30px;
+}
+
+.stap1Border {
+    border: 5px solid var(--pink-color);
+}
+
 /* Responsive */
 @media only screen and (min-height: 900px) {
     main {
@@ -460,6 +481,31 @@ figcaption {
         transform: translate(-50%, -50%);
     }
 
+    /* Nav */
+    nav ul li img:first-of-type {
+        transform: translateY(-30px);
+    }
+
+    .nav-img {
+        position: absolute;
+        height: 78px;
+    }
+    
+    nav ul li:first-of-type img:first-of-type {
+        height: 65px;
+        transform: translateY(-15px);
+    }
+    
+    nav ul li:nth-of-type(3) img:first-of-type {
+        height: 68px;
+        transform: translateY(-10px);
+    }
+
+    nav ul li {
+        margin-bottom: 20px;
+    }
+
+    /* Content */
     figure {
         width: 164px;
         height: 148px;
