@@ -61,5 +61,8 @@ Gebruikte code van anderen is geschreven op zijn plek met Bron: ... erbij.
 2. https://www.magnumicecream.com/nl/campagnes/magnum-ruby.html
 3. https://www.unileverfoodsolutions.be/nl/product/magnum-your-way-vanilla-25-NL-878759.html
 5. https://www.chewoutloud.com/cookies-and-cream-ice-cream/
+6. https://www.thespruceeats.com/making-the-most-of-sriracha-sauce-1328440
+7. https://www.shutterstock.com/vi/search/kim+chi
+8. https://nl.pinterest.com/pin/554998354060578089/
 
 </details>
