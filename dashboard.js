@@ -1,8 +1,11 @@
 // ************************************************ //
 // Footer knop links weg
-var btnStap1 = document.querySelector("#btnStap1");
-var footer1Btn = document.querySelector("#footer1Btn");
-var bar = document.querySelector(".bar-clmn");
+// var btnStap1 = document.querySelector("#btnStap1");
+// var footer1Btn = document.querySelector("#footer1Btn");
+// var bar = document.querySelector(".bar-clmn");
+
+// Stap ... text.content
+var stap1Txt = document.querySelector("#stap-1-txt");
 
 // Stap 1 keuze maken
 var kleinH = document.querySelector("#s-1-k-1");
@@ -11,14 +14,17 @@ var schelp = document.querySelector("#s-1-k-3");
 var stokje = document.querySelector("#s-1-k-4");
 var bakje = document.querySelector("#s-1-k-5");
 
-// Stap ... text.content
-var stap1 = document.querySelector("#stap-1");
+// Gekozen ijsje? Ga dan naar ... pagina
+var btnS2 = document.querySelector("footer button:last-of-type");
 
 // ************************************************ //
 // Footer knop links weg
-btnStap1.classList.add("none");
-footer1Btn.classList.add("footer1Btn");
-bar.classList.add("marginR30");
+// btnStap1.classList.add("none");
+// footer1Btn.classList.add("footer1Btn");
+// bar.classList.add("marginR30");
+
+// Stap ... text.content
+stap1Txt.textContent = "Stap 1: Hoorntje of bakje?";
 
 // Stap 1 keuze maken
 // Bron: https://attacomsian.com/blog/javascript-check-if-element-contains-css-class#:~:text=In%20vanilla%20JavaScript%2C%20you%20can,the%20class%20exists%2C%20otherwise%20false%20.&text=The%20classList.,-contains()%20method
@@ -104,6 +110,11 @@ bakje.addEventListener("click", s1K5);
 
 
 
+function Stap2K1() {
+    if (kleinH.classList.contains("keuze1Changed")) {
+        window.location = "index.html";    
+    }
+}
 
-// Stap ... text.content
-stap1.textContent = "Stap 1: Hoorntje of bakje?";
+// Gekozen ijsje? Ga dan naar ... pagina
+btnS2.addEventListener("click", Stap2K1)

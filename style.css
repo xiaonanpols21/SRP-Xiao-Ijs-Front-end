@@ -396,6 +396,15 @@ footer {
     color: var(--pink-color);
 }
 
+/* Footer dashboard */
+.footer-dash {
+    justify-content: flex-end;
+}
+
+.bar-dash {
+    margin-right: 30px;
+}
+
 /* Stap 1 */
 .stap-1-img {
     height: 55px;
@@ -508,7 +517,7 @@ figcaption {
 
 /* JS code */
 /* Footer knop links weg */
-.none {
+/* .none {
     display: none;
 }
 
@@ -518,15 +527,10 @@ figcaption {
 
 .marginR30 {
     margin-right: 30px;
-}
+} */
 
 .keuze1Changed {
     border: 5px solid var(--pink-color);
-}
-
-/* Stap 1 display */
-.stap-1 {
-    display: none;
 }
 
 /* Responsive */
