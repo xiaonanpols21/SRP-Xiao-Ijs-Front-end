@@ -333,6 +333,10 @@ nav ul li:active {
     text-align: right;
 }
 
+#stap-1 {
+    display: none;
+}
+
 /* Footer */
 footer {
     position: absolute;
@@ -442,7 +446,7 @@ figcaption {
 }
 
 .stap-1 figure:nth-of-type(2) img, .stap-1 figure:nth-of-type(4) img {
-    height: 70px;
+    height: 65px;
 }
 
 .stap-1 figure:nth-of-type(3) img {
@@ -516,7 +520,7 @@ figcaption {
     }
 
     .stap-1 figure:nth-of-type(2) img, .stap-1 figure:nth-of-type(4) img {
-        height: 97px;
+        height: 90px;
     }
     
     .stap-1 figure:nth-of-type(3) img {
