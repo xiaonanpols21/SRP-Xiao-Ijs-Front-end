@@ -4,6 +4,13 @@ var btnStap1 = document.querySelector("#btnStap1");
 var footer1Btn = document.querySelector("#footer1Btn");
 var bar = document.querySelector(".bar-clmn");
 
+// Stap ... text.content
+var stap1Txt = document.querySelector("#stap-1Txt");
+
+// Juiste sections
+var secS1 = document.querySelector(".stap-1");
+var secS2 = document.querySelector(".stap-2");
+
 // Stap 1 keuze maken
 var kleinH = document.querySelector("#s-1-k-1");
 var grootH = document.querySelector("#s-1-k-2");
@@ -11,96 +18,99 @@ var schelp = document.querySelector("#s-1-k-3");
 var stokje = document.querySelector("#s-1-k-4");
 var bakje = document.querySelector("#s-1-k-5");
 
-// Stap ... text.content
-var stap1 = document.querySelector("#stap-1");
-
 // ************************************************ //
 // Footer knop links weg
 btnStap1.classList.add("none");
 footer1Btn.classList.add("footer1Btn");
 bar.classList.add("marginR30");
 
+// Stap ... text.content
+stap1Txt.textContent = "Stap 1: Hoorntje of bakje?";
+
+// Juiste sections
+secS2.classList.add("none");
+
 // Stap 1 keuze maken
-// Bron: https: www.w3schools.com/howto/tryit.asp?filename=tryhow_js_toggle_hide_show ends here
+// Bron: https://attacomsian.com/blog/javascript-check-if-element-contains-css-class#:~:text=In%20vanilla%20JavaScript%2C%20you%20can,the%20class%20exists%2C%20otherwise%20false%20.&text=The%20classList.,-contains()%20method
 function s1K1() {
-    if (kleinH.style.border === "5px solid var(--pink-color)") {
-        kleinH.style.border = "1px solid var(--pink-color)";
+    if (kleinH.classList.contains("keuze1Changed")) {
+
     } else {
-      kleinH.style.border = "5px solid var(--pink-color)";
+        kleinH.classList.add("keuze1Changed");
     }
 
-    if (kleinH.style.border === "5px solid var(--pink-color)") {
-        grootH.style.border = "1px solid var(--pink-color)";
-        schelp.style.border = "1px solid var(--pink-color)";
-        stokje.style.border = "1px solid var(--pink-color)";
-        bakje.style.border = "1px solid var(--pink-color)";
-    } 
+    if (kleinH.classList.contains("keuze1Changed")) {
+        grootH.classList.remove("keuze1Changed");
+        schelp.classList.remove("keuze1Changed");
+        stokje.classList.remove("keuze1Changed");
+        bakje.classList.remove("keuze1Changed");
+    }
 }
 kleinH.addEventListener("click", s1K1);
 
 function s1K2() {
-    if (grootH.style.border === "5px solid var(--pink-color)") {
-        grootH.style.border = "1px solid var(--pink-color)";
+    if (grootH.classList.contains("keuze1Changed")) {
+
     } else {
-      grootH.style.border = "5px solid var(--pink-color)";
+        grootH.classList.add("keuze1Changed");
     }
 
-    if (grootH.style.border === "5px solid var(--pink-color)") {
-        kleinH.style.border = "1px solid var(--pink-color)";
-        schelp.style.border = "1px solid var(--pink-color)";
-        stokje.style.border = "1px solid var(--pink-color)";
-        bakje.style.border = "1px solid var(--pink-color)";
+    if (grootH.classList.contains("keuze1Changed")) {
+        kleinH.classList.remove("keuze1Changed");
+        schelp.classList.remove("keuze1Changed");
+        stokje.classList.remove("keuze1Changed");
+        bakje.classList.remove("keuze1Changed");
     }
 }
 grootH.addEventListener("click", s1K2);
 
 function s1K3() {
-    if (schelp.style.border === "5px solid var(--pink-color)") {
-        schelp.style.border = "1px solid var(--pink-color)";
+    if (schelp.classList.contains("keuze1Changed")) {
+
     } else {
-      schelp.style.border = "5px solid var(--pink-color)";
+        schelp.classList.add("keuze1Changed");
     }
 
-    if (schelp.style.border === "5px solid var(--pink-color)") {
-        kleinH.style.border = "1px solid var(--pink-color)";
-        grootH.style.border = "1px solid var(--pink-color)";
-        stokje.style.border = "1px solid var(--pink-color)";
-        bakje.style.border = "1px solid var(--pink-color)";
+    if (schelp.classList.contains("keuze1Changed")) {
+        kleinH.classList.remove("keuze1Changed");
+        grootH.classList.remove("keuze1Changed");
+        stokje.classList.remove("keuze1Changed");
+        bakje.classList.remove("keuze1Changed");
     }
 }
 schelp.addEventListener("click", s1K3);
 
 function s1K4() {
-    if (stokje.style.border === "5px solid var(--pink-color)") {
-        stokje.style.border = "1px solid var(--pink-color)";
+    if (stokje.classList.contains("keuze1Changed")) {
+
     } else {
-      stokje.style.border = "5px solid var(--pink-color)";
+        stokje.classList.add("keuze1Changed");
     }
 
-    if (stokje.style.border === "5px solid var(--pink-color)") {
-        grootH.style.border = "1px solid var(--pink-color)";
-        kleinH.style.border = "1px solid var(--pink-color)";
-        schelp.style.border = "1px solid var(--pink-color)";
-        bakje.style.border = "1px solid var(--pink-color)";
-    } 
+    if (stokje.classList.contains("keuze1Changed")) {
+        kleinH.classList.remove("keuze1Changed");
+        grootH.classList.remove("keuze1Changed");
+        schelp.classList.remove("keuze1Changed");
+        bakje.classList.remove("keuze1Changed");
+    }
 }
 stokje.addEventListener("click", s1K4);
 
 function s1K5() {
-    if (bakje.style.border === "5px solid var(--pink-color)") {
-        bakje.style.border = "1px solid var(--pink-color)";
+    if (bakje.classList.contains("keuze1Changed")) {
+
     } else {
-      bakje.style.border = "5px solid var(--pink-color)";
+        bakje.classList.add("keuze1Changed");
     }
 
-    if (bakje.style.border === "5px solid var(--pink-color)") {
-        kleinH.style.border = "1px solid var(--pink-color)";
-        grootH.style.border = "1px solid var(--pink-color)";
-        schelp.style.border = "1px solid var(--pink-color)";
-        stokje.style.border = "1px solid var(--pink-color)";
-    } 
+    if (bakje.classList.contains("keuze1Changed")) {
+        kleinH.classList.remove("keuze1Changed");
+        grootH.classList.remove("keuze1Changed");
+        schelp.classList.remove("keuze1Changed");
+        stokje.classList.remove("keuze1Changed");
+    }
 }
 bakje.addEventListener("click", s1K5);
 
-// Stap ... text.content
-stap1.textContent = "Stap 1: Hoorntje of bakje?";
+
+
