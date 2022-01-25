@@ -20,6 +20,7 @@
 
     --white-color: white;
     --black-color: black;
+    --grey-txt-color: #504A4E;
 }
 
 body {
@@ -196,12 +197,12 @@ header {
     padding: 15px;
     border: none;
     border-radius: 10px;
-    background: linear-gradient(90deg, rgba(252,234,238,1) 0%, rgba(249,213,220,1) 100%);
+    background: linear-gradient(45deg, rgba(252,234,238,1) 0%, rgba(249,213,220,1) 100%);
     cursor: pointer;
 }
 
 .winkelmand-btn:active {
-    background: linear-gradient(90deg, rgba(249,213,220,1) 0%, rgba(252,234,238,1) 100%);
+    background: linear-gradient(45deg, rgba(249,213,220,1) 0%, rgba(252,234,238,1) 100%);
 }
 
 .winkelmand-btn img {
@@ -395,7 +396,7 @@ footer {
     color: var(--pink-color);
 }
 
-/* Bureaublad */
+/* Stap 1 */
 .stap-1-img {
     height: 55px;
 }
@@ -453,6 +454,50 @@ figcaption {
     height: 45px;
 }
 
+/* Keuze blok knoppen */
+.stap-2-keuze-blok {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.knoppen-clmn {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.gekozen {
+    height: 360px;
+}
+
+.knoppen-clmn {
+    margin-left: 10px;
+}
+
+.keuze-btn {
+    display: grid;
+    grid-auto-columns: min-content;
+    justify-content: center;
+    align-items: center;
+    width: 170px;
+    height: 170px;
+    border-radius: 20px;
+    border: none;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: bold;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+.knoppen-clmn button:first-of-type {
+    background: linear-gradient(45deg, rgba(244,171,186,0.5) 0%, rgba(244,171,186,0.8) 100%);
+    color: var(--grey-txt-color);
+}
+
+.knoppen-clmn button:last-of-type {
+    background: linear-gradient(45deg, rgba(184,155,201,0.8) 0%, rgba(184,155,201,0.5) 100%);
+}
+
 /* JS code */
 /* Footer knop links weg */
 .none {
@@ -469,6 +514,11 @@ figcaption {
 
 .keuze1Changed {
     border: 5px solid var(--pink-color);
+}
+
+/* Stap 1 display */
+.stap-1 {
+    display: none;
 }
 
 /* Responsive */
