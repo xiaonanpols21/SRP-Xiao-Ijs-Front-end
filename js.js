@@ -4,16 +4,12 @@ var btnStap1 = document.querySelector("#btnStap1");
 var footer1Btn = document.querySelector("#footer1Btn");
 var bar = document.querySelector(".bar-clmn");
 
-
-// Klein hoorntje selected
-// var stap1KeuzeBtns = document.querySelector("figure");
-
 // Stap 1 keuze maken
-// var kleinH = document.querySelector("#s-1-k-1");
-// var grootH = document.querySelector("#s-1-k-2");
-// var schelp = document.querySelector("#s-1-k-3");
-// var stokje = document.querySelector("#s-1-k-4");
-// var bakje = document.querySelector("#s-1-k-5");
+var kleinH = document.querySelector("#s-1-k-1");
+var grootH = document.querySelector("#s-1-k-2");
+var schelp = document.querySelector("#s-1-k-3");
+var stokje = document.querySelector("#s-1-k-4");
+var bakje = document.querySelector("#s-1-k-5");
 
 
 
@@ -23,20 +19,31 @@ btnStap1.classList.add("none");
 footer1Btn.classList.add("footer1Btn");
 bar.classList.add("marginR30");
 
+// Stap 1 keuze maken
+// Bron: https: www.w3schools.com/howto/tryit.asp?filename=tryhow_js_toggle_hide_show ends here
+function s1K1() {
+    if (kleinH.style.border === "5px solid pink") {
+        kleinH.style.border = "1px solid pink";
+    } else {
+      kleinH.style.border = "5px solid pink";
+    }
 
-// Klein hoorntje selected
-// function stap1Select() {
-//     kleinH.classList.add("btnChanged");
-// }
+    if (kleinH.style.border === "5px solid pink") {
+        grootH.style.border = "1px solid pink";
+    } 
+}
+kleinH.addEventListener("click", s1K1);
 
-// kleinH.addEventListener("click", stap1Select);
+function s1K2() {
+    if (grootH.style.border === "5px solid pink") {
+        grootH.style.border = "1px solid pink";
+    } else {
+      grootH.style.border = "5px solid pink";
+    }
 
+    if (grootH.style.border === "5px solid pink") {
+        kleinH.style.border = "1px solid pink";
+    }
+}
+grootH.addEventListener("click", s1K2);
 
-var figures = btnContainer.getElementsByTagName("figure");
-
-for (var i = 0; i < figures.length; i++) {
-  figures[i].addEventListener("click", function() {
-    (document.querySelector('.btnChanged')) ? document.querySelector('.btnChanged').classList.remove('.btnChanged') : '';
-    this.classList.add('btnChanged');
-  });
-} 
