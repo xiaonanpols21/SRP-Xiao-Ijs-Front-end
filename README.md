@@ -56,6 +56,10 @@ Om JavaScript beter onder de knie te krijgen, maak ik oefeningen van het boek Du
 ## Bronnenlijst
 Gebruikte code van anderen is geschreven op zijn plek met Bron: ... erbij.
 <details>
+
 1. https://www.wikiwand.com/en/Magnum_(ice_cream)
+2. https://www.magnumicecream.com/nl/campagnes/magnum-ruby.html
+3. https://www.unileverfoodsolutions.be/nl/product/magnum-your-way-vanilla-25-NL-878759.html
+5. https://www.chewoutloud.com/cookies-and-cream-ice-cream/
 
 </details>
