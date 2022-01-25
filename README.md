@@ -54,6 +54,7 @@ Parameter is belangrijke feature van functies. Parameters is zodat we code niet 
 Om JavaScript beter onder de knie te krijgen, maak ik oefeningen van het boek Duckett die ik in jaar 1 las voor het beter begrijpen van JavaScript. Gemaakte opdrachten staan in het mapje: Duckett.
 
 ## Bronnenlijst
+Gebruikte code van anderen is geschreven op zijn plek met Bron: ... erbij.
 <details>
 1. https://www.wikiwand.com/en/Magnum_(ice_cream)
 
