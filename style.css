@@ -333,10 +333,6 @@ nav ul li:active {
     text-align: right;
 }
 
-#stap-1 {
-    display: none;
-}
-
 /* Footer */
 footer {
     position: absolute;
