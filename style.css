@@ -494,8 +494,16 @@ figcaption {
     color: var(--grey-txt-color);
 }
 
+.knoppen-clmn button:first-of-type:active {
+    background: linear-gradient(45deg, rgba(249,213,220,1) 0%, rgba(252,234,238,1) 100%);
+}
+
 .knoppen-clmn button:last-of-type {
     background: linear-gradient(45deg, rgba(184,155,201,0.8) 0%, rgba(184,155,201,0.5) 100%);
+}
+
+.knoppen-clmn button:last-of-type:active {
+    background: linear-gradient(45deg, rgba(163,137,191,0.5) 0%, rgba(163,137,191,0.25) 100%);
 }
 
 /* JS code */
