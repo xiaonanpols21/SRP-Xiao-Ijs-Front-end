@@ -150,8 +150,8 @@ header {
 }
 
 .special-btn-clmn {
-    display: flex;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     padding: 5px 10px;
     width: 230px;
     border-radius: 50px;
@@ -159,9 +159,15 @@ header {
     /* Bron: https://cssgradient.io/ */
 }
 
+.effect {
+    position: relative;
+}
+
 .special-img {
+    position: absolute;
     height: 68px;
     margin-right: 10px;
+    opacity: 1;
 }
 
 .special-naam {
@@ -190,6 +196,32 @@ header {
 
 .special-btn img {
     height: 15px;
+}
+
+.bedrag {
+    display: flex;
+    justify-content: center;
+}
+
+/* @keyframes special-animation {
+    0% {
+        transform:translate(0px);
+      }
+    100% {
+        transform:translate(240px, -30px);
+    }
+}
+
+.special-img {
+    animation-name:special-animation;
+    animation-duration:2s;
+    animation-iteration-count:1;
+} */
+
+.special-img-add {
+    transform: translate(240px, -30px);
+    opacity: 0;
+    transition: 1s;
 }
 
 /* Winkelmand */

@@ -7,6 +7,29 @@ var bar = document.querySelector(".bar-clmn");
 // Stap ... text.content
 var stap1Txt = document.querySelector("#stap-1Txt");
 
+// Special button
+var bedragTxt = document.querySelector(".bedrag p:last-of-type");
+var specialBtn = document.querySelector(".special-btn");
+var huidigBedrag = 0;
+// var bedrag250 = 2.50;
+// var intl250 = new Intl.NumberFormat('de-DE').format(bedrag250);
+var OreoImg1 = document.querySelector(".special-btn-clmn img:first-of-type");
+var OreoImg2 = document.querySelector(".special-btn-clmn img:last-of-type");
+
+// OreoImg2.classList.add("none");
+
+function OreoPlus() {
+    huidigBedrag = huidigBedrag + 2.50;
+    bedragTxt.textContent = huidigBedrag;
+    // bedragTxt.textContent = new Intl.NumberFormat('de-DE').format(huidigBedrag);
+    OreoImg1.classList.add("special-img-add"); 
+    OreoImg2.classList.remove("none");
+}
+
+specialBtn.addEventListener("click", OreoPlus);
+
+
+
 // Juiste sections
 var secS1 = document.querySelector(".stap-1");
 var secS2 = document.querySelector(".stap-2");
