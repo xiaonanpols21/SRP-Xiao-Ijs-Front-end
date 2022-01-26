@@ -151,9 +151,11 @@ header {
 
 .special-btn-clmn {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 64px 1fr 50px;
+    align-items: center;
     padding: 5px 10px;
     width: 230px;
+    height: 78px;
     border-radius: 50px;
     background: linear-gradient(90deg, rgba(163,137,191,0.5) 0%, rgba(163,137,191,0.25) 100%);
     /* Bron: https://cssgradient.io/ */
@@ -165,8 +167,10 @@ header {
 
 .special-img {
     position: absolute;
-    height: 68px;
-    margin-right: 10px;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
     opacity: 1;
 }
 
