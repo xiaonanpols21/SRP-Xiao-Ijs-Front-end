@@ -1,7 +1,7 @@
 // ************************************************ //
 // Footer knop links weg
-var btnStap1 = document.querySelector("#btnStap1");
-var footer1Btn = document.querySelector("#footer1Btn");
+var btnStap1 = document.querySelector("footer button:first-of-type");
+var footer = document.querySelector("footer");
 var bar = document.querySelector(".bar-clmn");
 
 // Stap ... text.content
@@ -24,11 +24,12 @@ var bakje = document.querySelector("#s-1-k-5");
 // Juiste sections
 var secS1 = document.querySelector(".stap-1");
 var secS2 = document.querySelector(".stap-2");
+var btnStap2 = document.querySelector("footer button:last-of-type");
 
 // ************************************************ //
 // Footer knop links weg
 btnStap1.classList.add("none");
-footer1Btn.classList.add("footer1Btn");
+footer.classList.add("footer-JS");
 bar.classList.add("marginR30");
 
 // Stap ... text.content
@@ -136,3 +137,62 @@ bakje.addEventListener("click", s1K5);
 
 // Juiste sections
 secS2.classList.add("none");
+
+function naarStap2() {
+    if (kleinH.classList.contains("keuze1Changed")) {
+        secS2.classList.remove("none");
+        secS1.classList.add("none");
+
+        btnStap1.classList.remove("none");
+        bar.classList.remove("marginR30");
+        footer.classList.remove("footer-JS");
+    }
+
+    if (grootH.classList.contains("keuze1Changed")) {
+        secS2.classList.remove("none");
+        secS1.classList.add("none");
+
+        btnStap1.classList.remove("none");
+        bar.classList.remove("marginR30");
+        footer.classList.remove("footer-JS");
+    }
+
+    if (schelp.classList.contains("keuze1Changed")) {
+        secS2.classList.remove("none");
+        secS1.classList.add("none");
+
+        btnStap1.classList.remove("none");
+        bar.classList.remove("marginR30");
+        footer.classList.remove("footer-JS");
+    }
+
+    if (stokje.classList.contains("keuze1Changed")) {
+        secS2.classList.remove("none");
+        secS1.classList.add("none");
+
+        btnStap1.classList.remove("none");
+        bar.classList.remove("marginR30");
+        footer.classList.remove("footer-JS");
+    }
+
+    if (bakje.classList.contains("keuze1Changed")) {
+        secS2.classList.remove("none");
+        secS1.classList.add("none");
+
+        btnStap1.classList.remove("none");
+        bar.classList.remove("marginR30");
+        footer.classList.remove("footer-JS");
+    }
+}
+btnStap2.addEventListener("click", naarStap2);
+
+function terugSec1() {
+    secS2.classList.add("none");
+    secS1.classList.remove("none");
+
+    btnStap1.classList.add("none");
+    footer.classList.add("footer-JS");
+    bar.classList.add("marginR30");
+}
+
+btnStap1.addEventListener("click", terugSec1);

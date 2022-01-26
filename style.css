@@ -223,7 +223,7 @@ header {
 } */
 
 .special-img-add {
-    transform: translate(240px, -30px);
+    transform: translate(240px, -60px);
     opacity: 0;
     transition: 1s;
 }
@@ -548,7 +548,7 @@ figcaption {
     display: none;
 }
 
-.footer1Btn {
+.footer-JS {
     justify-content: flex-end;
 }
 
@@ -559,11 +559,6 @@ figcaption {
 .keuze1Changed {
     border: 5px solid var(--pink-color);
 }
-
-/* Stap 1 display */
-/* .stap-1 {
-    display: none;
-} */
 
 /* Responsive */
 @media only screen and (min-height: 900px) {
