@@ -470,7 +470,7 @@ footer {
     gap: 15px;
 }
 
-figure {
+.figure-s-1 {
     position: relative;
     margin: auto;
     display: flex;
@@ -483,11 +483,11 @@ figure {
     cursor: pointer;
 }
 
-.stap-1 figure:last-of-type {
+.stap-1 .figure-s-1:last-of-type {
     margin: 0px;
 }
 
-figure img {
+.figure-s-1 img {
     position: absolute;
     bottom: 40px;
     left: 50%;
@@ -497,29 +497,29 @@ figure img {
     order: -1;
 }
 
-figcaption {
+.fig-s-1 {
     position: absolute;
     bottom: 10px;
     left: 0;
     right: 0;
 }
 
-.stap-1 figure:nth-of-type(2) img, .stap-1 figure:nth-of-type(4) img {
+.stap-1 .figure-s-1:nth-of-type(2) img, .stap-1 .figure-s-1:nth-of-type(4) img {
     height: 65px;
 }
 
-.stap-1 figure:nth-of-type(3) img {
+.stap-1 .figure-s-1:nth-of-type(3) img {
     height: 50px;
 }
 
-.stap-1 figure:nth-of-type(5) img {
+.stap-1 .figure-s-1:nth-of-type(5) img {
     height: 45px;
 }
 
 /* Keuze blok knoppen */
 .stap-2-keuze-blok {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 190px 1fr;
 }
 
 .knoppen-clmn {
@@ -566,6 +566,32 @@ figcaption {
 
 .knoppen-clmn button:last-of-type:active {
     background: linear-gradient(45deg, rgba(163,137,191,0.5) 0%, rgba(163,137,191,0.25) 100%);
+}
+
+/* Stap 2 Originals */
+.stap-2-originals {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px 10px;
+    margin: auto auto auto 10px;
+    height: fit-content;
+}
+
+.figure-s-2-original img {
+    height: 80px;
+    order: -1;
+    margin-bottom: 5px;
+}
+
+.figure-s-2-original {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+}
+
+.fig-s-2 {
+    display: flex;
+    flex-direction: column;
 }
 
 /* JS code */
@@ -621,7 +647,7 @@ figcaption {
     }
 
     /* Content */
-    figure {
+    .figure-s-1 {
         width: 164px;
         height: 148px;
     }
@@ -630,15 +656,15 @@ figcaption {
         height: 77px;
     }
 
-    .stap-1 figure:nth-of-type(2) img, .stap-1 figure:nth-of-type(4) img {
+    .stap-1 .figure-s-1:nth-of-type(2) img, .stap-1 .figure-s-1:nth-of-type(4) img {
         height: 90px;
     }
     
-    .stap-1 figure:nth-of-type(3) img {
+    .stap-1 .figure-s-1:nth-of-type(3) img {
         height: 67px;
     }
     
-    .stap-1 figure:nth-of-type(5) img {
+    .stap-1 .figure-s-1:nth-of-type(5) img {
         height: 57px;
     }
 }
