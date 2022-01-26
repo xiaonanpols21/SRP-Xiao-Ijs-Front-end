@@ -1,8 +1,9 @@
 // ************************************************ //
-// Footer knop links weg
+// Footer
 var btnStap1 = document.querySelector("footer button:first-of-type");
 var footer = document.querySelector("footer");
 var bar = document.querySelector(".bar-clmn");
+var pandaImg = document.querySelector(".bar-panda");
 
 //Winkelmand
 var aantalPro = document.querySelector(".winkelmand-hoeveel");
@@ -31,8 +32,11 @@ var secS1 = document.querySelector(".stap-1");
 var secS2 = document.querySelector(".stap-2");
 var btnStap2 = document.querySelector("footer button:last-of-type");
 
+// Juiste foto 
+var img1 = document.querySelector(".gekozen");
+
 // ************************************************ //
-// Footer knop links weg
+// Footer
 btnStap1.classList.add("none");
 footer.classList.add("footer-JS");
 bar.classList.add("marginR30");
@@ -58,7 +62,6 @@ function OreoPlus() {
     OreoImg1.classList.add("special-img-add"); 
     OreoImg2.classList.remove("none");
 
-    
     huidigAantal = huidigAantal + 1;
     huidigAantalTxt.textContent = huidigAantal;
     aantalPro.classList.remove("none");
@@ -159,6 +162,9 @@ function naarStap2() {
         btnStap1.classList.remove("none");
         bar.classList.remove("marginR30");
         footer.classList.remove("footer-JS");
+        img1.src = "img/k-1-1.png";
+
+        pandaImg.classList.add("panda-img-add-1"); 
     }
 
     if (grootH.classList.contains("keuze1Changed")) {
@@ -168,6 +174,9 @@ function naarStap2() {
         btnStap1.classList.remove("none");
         bar.classList.remove("marginR30");
         footer.classList.remove("footer-JS");
+        img1.src = "img/k-1-2.png";
+
+        pandaImg.classList.add("panda-img-add-1"); 
     }
 
     if (schelp.classList.contains("keuze1Changed")) {
@@ -177,6 +186,9 @@ function naarStap2() {
         btnStap1.classList.remove("none");
         bar.classList.remove("marginR30");
         footer.classList.remove("footer-JS");
+        img1.src = "img/k-1-3.png";
+
+        pandaImg.classList.add("panda-img-add-1"); 
     }
 
     if (stokje.classList.contains("keuze1Changed")) {
@@ -186,6 +198,9 @@ function naarStap2() {
         btnStap1.classList.remove("none");
         bar.classList.remove("marginR30");
         footer.classList.remove("footer-JS");
+        img1.src = "img/k-1-4.png";
+
+        pandaImg.classList.add("panda-img-add-1"); 
     }
 
     if (bakje.classList.contains("keuze1Changed")) {
@@ -195,7 +210,11 @@ function naarStap2() {
         btnStap1.classList.remove("none");
         bar.classList.remove("marginR30");
         footer.classList.remove("footer-JS");
+        img1.src = "img/k-1-5.png";
+
+        pandaImg.classList.add("panda-img-add-1"); 
     }
+
 }
 btnStap2.addEventListener("click", naarStap2);
 
@@ -206,6 +225,7 @@ function terugSec1() {
     btnStap1.classList.add("none");
     footer.classList.add("footer-JS");
     bar.classList.add("marginR30");
-}
 
+    pandaImg.classList.remove("panda-img-add-1"); 
+}
 btnStap1.addEventListener("click", terugSec1);

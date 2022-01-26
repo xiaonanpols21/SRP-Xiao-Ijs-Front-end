@@ -427,7 +427,7 @@ footer {
 .bar-dot {
     list-style: none;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     transform: translateY(4px);
 }
 
@@ -446,6 +446,11 @@ footer {
 
 .bar-panda {
     height: 40px;
+}
+
+.panda-img-add-1 {
+    transform: translateX(57px);
+    transition: 1s;
 }
 
 .bar-img i {
