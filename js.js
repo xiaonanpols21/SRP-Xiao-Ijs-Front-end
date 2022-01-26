@@ -1,6 +1,7 @@
 // ************************************************ //
 // Footer
-var btnStap1 = document.querySelector("footer button:first-of-type");
+var btnStap1 = document.querySelector("#stap-1-1");
+var btnArrowLeft = document.querySelector(".arrow-left");
 var footer = document.querySelector("footer");
 var bar = document.querySelector(".bar-clmn");
 var pandaImg = document.querySelector(".bar-panda");
@@ -30,14 +31,23 @@ var bakje = document.querySelector("#s-1-k-5");
 // Juiste sections
 var secS1 = document.querySelector(".stap-1");
 var secS2 = document.querySelector(".stap-2");
-var btnStap2 = document.querySelector("footer button:last-of-type");
+
+var btnStap2 = document.querySelector("#stap-2-1");
+
+knoppenClmn = document.querySelector(".knoppen-clmn");
+stap2Originals = document.querySelector(".stap-2-originals");
 
 // Juiste foto 
 var img1 = document.querySelector(".gekozen");
 
+// 2 flavor knoppen
+var btnOriginals = document.querySelector(".knoppen-clmn button:first-of-type");
+var btnXiaoSpec = document.querySelector(".knoppen-clmn button:last-of-type");
+
 // ************************************************ //
 // Footer
 btnStap1.classList.add("none");
+btnArrowLeft.classList.add("none");
 footer.classList.add("footer-JS");
 bar.classList.add("marginR30");
 
@@ -165,6 +175,7 @@ function naarStap2() {
         img1.src = "img/k-1-1.png";
 
         pandaImg.classList.add("panda-img-add-1"); 
+        stap1Txt.textContent = "Stap 2: Smaak";
     }
 
     if (grootH.classList.contains("keuze1Changed")) {
@@ -227,5 +238,18 @@ function terugSec1() {
     bar.classList.add("marginR30");
 
     pandaImg.classList.remove("panda-img-add-1"); 
+    stap1Txt.textContent = "Stap 1: Hoorntje of bakje?";
 }
 btnStap1.addEventListener("click", terugSec1);
+
+stap2Originals.classList.add("none");
+
+// 2 flavor knoppen
+function gaNaarOriginals() {
+    stap2Originals.classList.remove("none");
+    knoppenClmn.classList.add("none");
+    btnStap1.classList.add("none");
+    btnArrowLeft.classList.remove("none");
+
+}
+btnOriginals.addEventListener("click", gaNaarOriginals);

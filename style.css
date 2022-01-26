@@ -103,6 +103,10 @@ h3 {
     cursor: pointer;
 }
 
+.arrow-left {
+    width: 116.22px;
+}
+
 .btn-2:active {
     background-color: var(--dark-pink-color);
 }
@@ -374,7 +378,6 @@ nav ul li:active {
 /* Bureaublad */
 .bureaublad {
     position: relative;
-    padding: 10px;
 }
 .bureaublad h1, .bureaublad h2 {
     text-align: center;
@@ -468,11 +471,11 @@ footer {
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
+    justify-content: center;
 }
 
 .figure-s-1 {
     position: relative;
-    margin: auto;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -481,10 +484,6 @@ footer {
     border: 1px solid var(--pink-color);
     border-radius: 20px;
     cursor: pointer;
-}
-
-.stap-1 .figure-s-1:last-of-type {
-    margin: 0px;
 }
 
 .figure-s-1 img {
@@ -533,7 +532,7 @@ footer {
 }
 
 .knoppen-clmn {
-    margin-left: 10px;
+    margin-left: 20px;
 }
 
 .keuze-btn {
@@ -573,14 +572,15 @@ footer {
     display: flex;
     flex-wrap: wrap;
     gap: 20px 10px;
-    margin: auto auto auto 10px;
+    justify-content: flex-end;
+    margin: auto;
     height: fit-content;
 }
 
 .figure-s-2-original img {
     height: 80px;
     order: -1;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 .figure-s-2-original {
@@ -592,6 +592,7 @@ footer {
 .fig-s-2 {
     display: flex;
     flex-direction: column;
+    text-align: center;
 }
 
 /* JS code */
