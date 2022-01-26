@@ -8,30 +8,11 @@ var bar = document.querySelector(".bar-clmn");
 var stap1Txt = document.querySelector("#stap-1Txt");
 
 // Special button
-var bedragTxt = document.querySelector(".bedrag p");
+var bedragTxt = document.querySelector(".bedrag p:last-of-type");
 var specialBtn = document.querySelector(".special-btn");
 var huidigBedrag = 0;
 var OreoImg1 = document.querySelector(".special-btn-clmn img:first-of-type");
 var OreoImg2 = document.querySelector(".special-btn-clmn img:last-of-type");
-
-OreoImg2.classList.add("none");
-
-function OreoPlus() {
-    huidigBedrag = huidigBedrag + 2.50;
-    bedragTxt.textContent = huidigBedrag;
-    bedragTxt.textContent = new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'EUR' }).format(huidigBedrag);
-    // Bron: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat
-    OreoImg1.classList.add("special-img-add"); 
-    OreoImg2.classList.remove("none");
-}
-
-specialBtn.addEventListener("click", OreoPlus);
-
-
-
-// Juiste sections
-var secS1 = document.querySelector(".stap-1");
-var secS2 = document.querySelector(".stap-2");
 
 // Stap 1 keuze maken
 var kleinH = document.querySelector("#s-1-k-1");
@@ -39,6 +20,10 @@ var grootH = document.querySelector("#s-1-k-2");
 var schelp = document.querySelector("#s-1-k-3");
 var stokje = document.querySelector("#s-1-k-4");
 var bakje = document.querySelector("#s-1-k-5");
+
+// Juiste sections
+var secS1 = document.querySelector(".stap-1");
+var secS2 = document.querySelector(".stap-2");
 
 // ************************************************ //
 // Footer knop links weg
@@ -49,8 +34,23 @@ bar.classList.add("marginR30");
 // Stap ... text.content
 stap1Txt.textContent = "Stap 1: Hoorntje of bakje?";
 
-// Juiste sections
-secS2.classList.add("none");
+// Special button
+OreoImg2.classList.add("none");
+
+// Bron: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed
+function financial(x) {
+    return Number.parseFloat(x).toFixed(2);
+}
+
+function OreoPlus() {
+    huidigBedrag = huidigBedrag + 2.50;
+    bedragTxt.textContent = financial(huidigBedrag);
+    // Bron: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat
+    OreoImg1.classList.add("special-img-add"); 
+    OreoImg2.classList.remove("none");
+}
+
+specialBtn.addEventListener("click", OreoPlus);
 
 // Stap 1 keuze maken
 // Bron: https://attacomsian.com/blog/javascript-check-if-element-contains-css-class#:~:text=In%20vanilla%20JavaScript%2C%20you%20can,the%20class%20exists%2C%20otherwise%20false%20.&text=The%20classList.,-contains()%20method
@@ -134,5 +134,5 @@ function s1K5() {
 }
 bakje.addEventListener("click", s1K5);
 
-
-
+// Juiste sections
+secS2.classList.add("none");
