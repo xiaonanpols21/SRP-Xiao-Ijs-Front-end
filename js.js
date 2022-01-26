@@ -4,6 +4,11 @@ var btnStap1 = document.querySelector("footer button:first-of-type");
 var footer = document.querySelector("footer");
 var bar = document.querySelector(".bar-clmn");
 
+//Winkelmand
+var aantalPro = document.querySelector(".winkelmand-hoeveel");
+var huidigAantalTxt = document.querySelector(".winkelmand-hoeveel p");
+var huidigAantal = 0;
+
 // Stap ... text.content
 var stap1Txt = document.querySelector("#stap-1Txt");
 
@@ -32,6 +37,9 @@ btnStap1.classList.add("none");
 footer.classList.add("footer-JS");
 bar.classList.add("marginR30");
 
+// Winkelmand
+aantalPro.classList.add("none");
+
 // Stap ... text.content
 stap1Txt.textContent = "Stap 1: Hoorntje of bakje?";
 
@@ -49,6 +57,11 @@ function OreoPlus() {
     // Bron: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat
     OreoImg1.classList.add("special-img-add"); 
     OreoImg2.classList.remove("none");
+
+    
+    huidigAantal = huidigAantal + 1;
+    huidigAantalTxt.textContent = huidigAantal;
+    aantalPro.classList.remove("none");
 }
 
 specialBtn.addEventListener("click", OreoPlus);

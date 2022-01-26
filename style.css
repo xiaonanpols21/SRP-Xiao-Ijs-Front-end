@@ -230,8 +230,10 @@ header {
 
 /* Winkelmand */
 .winkelmand-btn {
+    position: relative;
+    display: flex;
+    justify-content: center;
     padding: 15px;
-    border: none;
     border-radius: 10px;
     background: linear-gradient(45deg, rgba(252,234,238,1) 0%, rgba(249,213,220,1) 100%);
     cursor: pointer;
@@ -252,11 +254,30 @@ header {
     text-align: center;
 }
 
-.winkelmand div {
+.bedrag {
     margin-top: -7px;
     padding: 14px 0px 7px 0px;
     border-radius: 0px 0px 10px 10px;
     background-color: var(--pink-15);
+}
+
+.winkelmand-hoeveel {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50px;
+    color: white;
+    background-color: var(--green-color);
+}
+
+.winkelmand-hoeveel p {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 14px;
 }
 
 /* Nav */
