@@ -275,3 +275,12 @@ function originalTerug2Flavor() {
 }
 
 originalArrow.addEventListener("click", originalTerug2Flavor);
+
+function XiaoSpecTerug2Flavor() {
+    stap2Xiao.classList.add("none");
+    knoppenClmn.classList.remove("none");
+    xiaoArrow.classList.add("none");
+    btnStap1.classList.remove("none");
+}
+
+originalArrow.addEventListener("click", XiaoSpecTerug2Flavor);
