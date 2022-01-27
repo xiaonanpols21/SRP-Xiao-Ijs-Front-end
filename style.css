@@ -104,7 +104,7 @@ h3 {
 }
 
 .arrow-left {
-    width: 116.22px;
+    width: 111.92px;
 }
 
 .btn-2:active {
@@ -568,7 +568,7 @@ footer {
 }
 
 /* Stap 2 Originals */
-.stap-2-originals {
+.stap-2-flavor {
     display: flex;
     flex-wrap: wrap;
     gap: 20px 10px;
@@ -577,13 +577,13 @@ footer {
     height: fit-content;
 }
 
-.figure-s-2-original img {
+.figure-s-2-flavor img {
     height: 80px;
     order: -1;
     margin-bottom: 10px;
 }
 
-.figure-s-2-original {
+.figure-s-2-flavor {
     display: flex;
     flex-direction: column;
     height: fit-content;

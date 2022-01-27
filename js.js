@@ -1,10 +1,11 @@
 // ************************************************ //
 // Footer
 var btnStap1 = document.querySelector("#stap-1-1");
-var btnArrowLeft = document.querySelector(".arrow-left");
 var footer = document.querySelector("footer");
 var bar = document.querySelector(".bar-clmn");
 var pandaImg = document.querySelector(".bar-panda");
+var originalArrow = document.querySelector(".originalBtn");
+var xiaoArrow = document.querySelector(".xiaoBtn");
 
 //Winkelmand
 var aantalPro = document.querySelector(".winkelmand-hoeveel");
@@ -34,8 +35,9 @@ var secS2 = document.querySelector(".stap-2");
 
 var btnStap2 = document.querySelector("#stap-2-1");
 
-knoppenClmn = document.querySelector(".knoppen-clmn");
-stap2Originals = document.querySelector(".stap-2-originals");
+var knoppenClmn = document.querySelector(".knoppen-clmn");
+var stap2Originals = document.querySelector(".stap-2-originals");
+var stap2Xiao = document.querySelector(".stap-2-xiao");
 
 // Juiste foto 
 var img1 = document.querySelector(".gekozen");
@@ -47,9 +49,10 @@ var btnXiaoSpec = document.querySelector(".knoppen-clmn button:last-of-type");
 // ************************************************ //
 // Footer
 btnStap1.classList.add("none");
-btnArrowLeft.classList.add("none");
 footer.classList.add("footer-JS");
 bar.classList.add("marginR30");
+originalArrow.classList.add("none");
+xiaoArrow.classList.add("none");
 
 // Winkelmand
 aantalPro.classList.add("none");
@@ -243,13 +246,32 @@ function terugSec1() {
 btnStap1.addEventListener("click", terugSec1);
 
 stap2Originals.classList.add("none");
+stap2Xiao.classList.add("none");
 
 // 2 flavor knoppen
 function gaNaarOriginals() {
     stap2Originals.classList.remove("none");
     knoppenClmn.classList.add("none");
     btnStap1.classList.add("none");
-    btnArrowLeft.classList.remove("none");
+    originalArrow.classList.remove("none");
 
 }
 btnOriginals.addEventListener("click", gaNaarOriginals);
+
+function gaNaarXiaoSpec() {
+    stap2Xiao.classList.remove("none");
+    knoppenClmn.classList.add("none");
+    btnStap1.classList.add("none");
+    originalArrow.classList.remove("none");
+
+}
+btnXiaoSpec.addEventListener("click", gaNaarXiaoSpec);
+
+function originalTerug2Flavor() {
+    stap2Originals.classList.add("none");
+    knoppenClmn.classList.remove("none");
+    originalArrow.classList.add("none");
+    btnStap1.classList.remove("none");
+}
+
+originalArrow.addEventListener("click", originalTerug2Flavor);
