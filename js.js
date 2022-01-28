@@ -53,6 +53,11 @@ var originalAardbei = document.querySelector(".orig-aardbei");
 var originalVanille = document.querySelector(".orig-vanille");
 var originalOreo = document.querySelector(".orig-oreo");
 
+var XiaoSpecPizza = document.querySelector(".xiao-pizza");
+var XiaoSpecRijst = document.querySelector(".xiao-rijst");
+var XiaoSpecNoodles = document.querySelector(".xiao-noodles");
+var XiaoSpecTteok = document.querySelector(".xiao-tteok");
+
 // ************************************************ //
 // Footer
 btnStap1.classList.add("none");
@@ -319,3 +324,28 @@ function stap2O4() {
     img2.src = "img/k-2-o-4.png";
 }
 originalOreo.addEventListener("click", stap2O4);
+
+// Xiao Special flavors
+function stap2X1() {
+    img2.classList.remove("none");
+    img2.src = "img/k-2-x-1.png";
+}
+XiaoSpecPizza.addEventListener("click", stap2X1);
+
+function stap2X2() {
+    img2.classList.remove("none");
+    img2.src = "img/k-2-x-2.png";
+}
+XiaoSpecRijst.addEventListener("click", stap2X2);
+
+function stap2X3() {
+    img2.classList.remove("none");
+    img2.src = "img/k-2-x-3.png";
+}
+XiaoSpecNoodles.addEventListener("click", stap2X3);
+
+function stap2X4() {
+    img2.classList.remove("none");
+    img2.src = "img/k-2-x-4.png";
+}
+XiaoSpecTteok.addEventListener("click", stap2X4);
