@@ -41,10 +41,17 @@ var stap2Xiao = document.querySelector(".stap-2-xiao");
 
 // Juiste foto 
 var img1 = document.querySelector(".gekozen");
+var img2 = document.querySelector(".topping");
 
 // 2 flavor knoppen
 var btnOriginals = document.querySelector(".knoppen-clmn button:first-of-type");
 var btnXiaoSpec = document.querySelector(".knoppen-clmn button:last-of-type");
+
+// Original flavors
+var originalXiaocolade = document.querySelector(".orig-xiaocolade");
+var originalAardbei = document.querySelector(".orig-aardbei");
+var originalVanille = document.querySelector(".orig-vanille");
+var originalOreo = document.querySelector(".orig-oreo");
 
 // ************************************************ //
 // Footer
@@ -248,6 +255,9 @@ btnStap1.addEventListener("click", terugSec1);
 stap2Originals.classList.add("none");
 stap2Xiao.classList.add("none");
 
+// Juiste foto
+img2.classList.add("none");
+
 // 2 flavor knoppen
 function gaNaarOriginals() {
     stap2Originals.classList.remove("none");
@@ -284,3 +294,28 @@ function XiaoSpecTerug2Flavor() {
 }
 
 originalArrow.addEventListener("click", XiaoSpecTerug2Flavor);
+
+// Original flavors
+function stap2O1() {
+    img2.classList.remove("none");
+    img2.src = "img/k-2-o-1.png";
+}
+originalXiaocolade.addEventListener("click", stap2O1);
+
+function stap2O2() {
+    img2.classList.remove("none");
+    img2.src = "img/k-2-o-2.png";
+}
+originalAardbei.addEventListener("click", stap2O2);
+
+function stap2O3() {
+    img2.classList.remove("none");
+    img2.src = "img/k-2-o-3.png";
+}
+originalVanille.addEventListener("click", stap2O3);
+
+function stap2O4() {
+    img2.classList.remove("none");
+    img2.src = "img/k-2-o-4.png";
+}
+originalOreo.addEventListener("click", stap2O4);

@@ -527,7 +527,7 @@ footer {
     gap: 20px;
 }
 
-.gekozen {
+.gekozen, .topping {
     height: 360px;
 }
 
@@ -567,7 +567,7 @@ footer {
     background: linear-gradient(45deg, rgba(163,137,191,0.5) 0%, rgba(163,137,191,0.25) 100%);
 }
 
-/* Stap 2 Originals */
+/* Stap 2 */
 .stap-2-flavor {
     display: flex;
     flex-wrap: wrap;
@@ -577,16 +577,17 @@ footer {
     height: fit-content;
 }
 
-.figure-s-2-flavor img {
-    height: 80px;
-    order: -1;
-    margin-bottom: 10px;
-}
-
 .figure-s-2-flavor {
     display: flex;
     flex-direction: column;
     height: fit-content;
+    cursor: pointer;
+}
+
+.figure-s-2-flavor img {
+    height: 80px;
+    order: -1;
+    margin-bottom: 10px;
 }
 
 .fig-s-2 {
@@ -594,6 +595,17 @@ footer {
     flex-direction: column;
     text-align: center;
 }
+
+.gekozen-frame {
+    position: relative;
+}
+
+.gekozen-frame img {
+    position: absolute;
+}
+
+/* Originals */
+
 
 /* JS code */
 /* Footer knop links weg */
