@@ -1,6 +1,8 @@
 // ************************************************ //
 // Footer
 var btnStap1 = document.querySelector("#stap-1-1");
+var btnStap2 = document.querySelector("#stap-2-1");
+var btnStap3 = document.querySelector("#stap-3-1");
 var footer = document.querySelector("footer");
 var bar = document.querySelector(".bar-clmn");
 var pandaImg = document.querySelector(".bar-panda");
@@ -33,9 +35,7 @@ var bakje = document.querySelector("#s-1-k-5");
 var secS1 = document.querySelector(".stap-1");
 var secS2 = document.querySelector(".stap-2");
 
-var btnStap2 = document.querySelector("#stap-2-1");
-
-var knoppenClmn = document.querySelector(".knoppen-clmn");
+var knoppenClmn = document.querySelector(".stap-2-knoppen");
 var stap2Originals = document.querySelector(".stap-2-originals");
 var stap2Xiao = document.querySelector(".stap-2-xiao");
 
@@ -44,8 +44,8 @@ var img1 = document.querySelector(".gekozen");
 var img2 = document.querySelector(".topping");
 
 // 2 flavor knoppen
-var btnOriginals = document.querySelector(".knoppen-clmn button:first-of-type");
-var btnXiaoSpec = document.querySelector(".knoppen-clmn button:last-of-type");
+var btnOriginals = document.querySelector(".stap-2-knoppen button:first-of-type");
+var btnXiaoSpec = document.querySelector(".stap-2-knoppen button:last-of-type");
 
 // Original flavors
 var originalXiaocolade = document.querySelector(".orig-xiaocolade");
@@ -61,6 +61,7 @@ var XiaoSpecTteok = document.querySelector(".xiao-tteok");
 // ************************************************ //
 // Footer
 btnStap1.classList.add("none");
+btnStap3.classList.add("none");
 footer.classList.add("footer-JS");
 bar.classList.add("marginR30");
 originalArrow.classList.add("none");
@@ -185,6 +186,9 @@ function naarStap2() {
         secS1.classList.add("none");
 
         btnStap1.classList.remove("none");
+        btnStap2.classList.add("none");
+        btnStap3.classList.remove("none");
+
         bar.classList.remove("marginR30");
         footer.classList.remove("footer-JS");
         img1.src = "img/k-1-1.png";
@@ -198,11 +202,15 @@ function naarStap2() {
         secS1.classList.add("none");
 
         btnStap1.classList.remove("none");
+        btnStap2.classList.add("none");
+        btnStap3.classList.remove("none");
+
         bar.classList.remove("marginR30");
         footer.classList.remove("footer-JS");
         img1.src = "img/k-1-2.png";
 
         pandaImg.classList.add("panda-img-add-1"); 
+        stap1Txt.textContent = "Stap 2: Smaak";
     }
 
     if (schelp.classList.contains("keuze1Changed")) {
@@ -210,11 +218,15 @@ function naarStap2() {
         secS1.classList.add("none");
 
         btnStap1.classList.remove("none");
+        btnStap2.classList.add("none");
+        btnStap3.classList.remove("none");
+
         bar.classList.remove("marginR30");
         footer.classList.remove("footer-JS");
-        img1.src = "img/k-1-3.png";
+        img1.src = "img/k-1-3-edit.png";
 
         pandaImg.classList.add("panda-img-add-1"); 
+        stap1Txt.textContent = "Stap 2: Smaak";
     }
 
     if (stokje.classList.contains("keuze1Changed")) {
@@ -222,11 +234,15 @@ function naarStap2() {
         secS1.classList.add("none");
 
         btnStap1.classList.remove("none");
+        btnStap2.classList.add("none");
+        btnStap3.classList.remove("none");
+
         bar.classList.remove("marginR30");
         footer.classList.remove("footer-JS");
         img1.src = "img/k-1-4.png";
 
         pandaImg.classList.add("panda-img-add-1"); 
+        stap1Txt.textContent = "Stap 2: Smaak";
     }
 
     if (bakje.classList.contains("keuze1Changed")) {
@@ -234,11 +250,15 @@ function naarStap2() {
         secS1.classList.add("none");
 
         btnStap1.classList.remove("none");
+        btnStap2.classList.add("none");
+        btnStap3.classList.remove("none");
+
         bar.classList.remove("marginR30");
         footer.classList.remove("footer-JS");
         img1.src = "img/k-1-5.png";
 
         pandaImg.classList.add("panda-img-add-1"); 
+        stap1Txt.textContent = "Stap 2: Smaak";
     }
 
 }
@@ -249,6 +269,8 @@ function terugSec1() {
     secS1.classList.remove("none");
 
     btnStap1.classList.add("none");
+    btnStap2.classList.remove("none");
+    btnStap3.classList.add("none");
     footer.classList.add("footer-JS");
     bar.classList.add("marginR30");
 
