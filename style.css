@@ -388,7 +388,7 @@ nav ul li:active {
 }
 
 .bureaublad p {
-    margin-top: 10px;
+    margin: 10px 0px;
     font-size: 20px;
     font-weight: bold;
     text-align: right;

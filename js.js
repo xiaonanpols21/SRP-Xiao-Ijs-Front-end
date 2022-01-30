@@ -482,24 +482,49 @@ xiaoArrow3.addEventListener("click", XiaoSpecTerug3Flavor);
 // Original flavors
 function stap3O1() {
     img3.classList.remove("none");
-    img3.src = "img/k-3-x-1.png";
+    img3.src = "img/k-3-o-1.png";
 }
 originalDisco.addEventListener("click", stap3O1);
 
-function stap2O2() {
-    img2.classList.remove("none");
-    img2.src = "img/k-2-o-2.png";
+function stap3O2() {
+    img3.classList.remove("none");
+    img3.src = "img/k-3-o-2.png";
 }
-originalAardbei.addEventListener("click", stap2O2);
+originalNootjes.addEventListener("click", stap3O2);
 
-function stap2O3() {
-    img2.classList.remove("none");
-    img2.src = "img/k-2-o-3.png";
+function stap3O3() {
+    img3.classList.remove("none");
+    img3.src = "img/k-3-o-3.png";
 }
-originalVanille.addEventListener("click", stap2O3);
+originalMm.addEventListener("click", stap3O3);
 
-function stap2O4() {
-    img2.classList.remove("none");
-    img2.src = "img/k-2-o-4.png";
+function stap3O4() {
+    img3.classList.remove("none");
+    img3.src = "img/k-3-o-4.png";
 }
-originalOreo.addEventListener("click", stap2O4);
+originalXiaocoSaus.addEventListener("click", stap3O4);
+
+// Xiao Special flavors
+function stap3X1() {
+    img3.classList.remove("none");
+    img3.src = "img/k-3-x-1.png";
+}
+XiaoSpecKroepoek.addEventListener("click", stap3X1);
+
+function stap3X2() {
+    img3.classList.remove("none");
+    img3.src = "img/k-3-x-2.png";
+}
+XiaoSpecSrir.addEventListener("click", stap3X2);
+
+function stap3X3() {
+    img3.classList.remove("none");
+    img3.src = "img/k-3-x-3.png";
+}
+XiaoSpecKimchi.addEventListener("click", stap3X3);
+
+function stap3X4() {
+    img3.classList.remove("none");
+    img3.src = "img/k-3-x-4.png";
+}
+XiaoSpecOreoPocky.addEventListener("click", stap3X4);
