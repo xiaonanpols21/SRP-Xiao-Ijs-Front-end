@@ -1,13 +1,18 @@
 // ************************************************ //
 // Footer
-var btnStap1 = document.querySelector("#stap-1-1");
-var btnStap2 = document.querySelector("#stap-2-1");
-var btnStap3 = document.querySelector("#stap-3-1");
+var btnStap1 = document.querySelector("#stap-1-btn");
+var btnStap2 = document.querySelector("#stap-2-btn");
+var btnStap2Left = document.querySelector("#stap-2-btn-left");
+var btnStap3 = document.querySelector("#stap-3-btn");
+var btnStapGereed = document.querySelector("#stap-4-btn");
 var footer = document.querySelector("footer");
 var bar = document.querySelector(".bar-clmn");
 var pandaImg = document.querySelector(".bar-panda");
+
 var originalArrow = document.querySelector(".originalBtn");
 var xiaoArrow = document.querySelector(".xiaoBtn");
+var originalArrow3 = document.querySelector(".originalBtn3");
+var xiaoArrow3 = document.querySelector(".xiaoBtn3");
 
 //Winkelmand
 var aantalPro = document.querySelector(".winkelmand-hoeveel");
@@ -35,9 +40,13 @@ var bakje = document.querySelector("#s-1-k-5");
 var secS1 = document.querySelector(".stap-1");
 var secS2 = document.querySelector(".stap-2");
 
-var knoppenClmn = document.querySelector(".stap-2-knoppen");
+var sec2Clmn = document.querySelector(".stap-2-knoppen");
 var stap2Originals = document.querySelector(".stap-2-originals");
 var stap2Xiao = document.querySelector(".stap-2-xiao");
+
+var sec3Clmn = document.querySelector(".stap-3-knoppen");
+var stap3Originals = document.querySelector(".stap-3-originals");
+var stap3Xiao = document.querySelector(".stap-3-xiao");
 
 // Juiste foto 
 var img1 = document.querySelector(".gekozen");
@@ -58,14 +67,27 @@ var XiaoSpecRijst = document.querySelector(".xiao-rijst");
 var XiaoSpecNoodles = document.querySelector(".xiao-noodles");
 var XiaoSpecTteok = document.querySelector(".xiao-tteok");
 
+// Naar stap 3
+
+// 2 flavor knoppen Stap 3
+var btnOriginals3 = document.querySelector(".stap-3-knoppen button:first-of-type");
+var btnXiaoSpec3 = document.querySelector(".stap-3-knoppen button:last-of-type");
+
 // ************************************************ //
 // Footer
 btnStap1.classList.add("none");
 btnStap3.classList.add("none");
+btnStapGereed.classList.add("none");
+
+btnStap2Left.classList.add("none");
+
 footer.classList.add("footer-JS");
 bar.classList.add("marginR30");
 originalArrow.classList.add("none");
 xiaoArrow.classList.add("none");
+
+originalArrow3.classList.add("none");
+xiaoArrow3.classList.add("none");
 
 // Winkelmand
 aantalPro.classList.add("none");
@@ -179,6 +201,7 @@ bakje.addEventListener("click", s1K5);
 
 // Juiste sections
 secS2.classList.add("none");
+sec3Clmn.classList.add("none");
 
 function naarStap2() {
     if (kleinH.classList.contains("keuze1Changed")) {
@@ -282,13 +305,16 @@ btnStap1.addEventListener("click", terugSec1);
 stap2Originals.classList.add("none");
 stap2Xiao.classList.add("none");
 
+stap3Originals.classList.add("none");
+stap3Xiao.classList.add("none");
+
 // Juiste foto
 img2.classList.add("none");
 
 // 2 flavor knoppen
 function gaNaarOriginals() {
     stap2Originals.classList.remove("none");
-    knoppenClmn.classList.add("none");
+    sec2Clmn.classList.add("none");
     btnStap1.classList.add("none");
     originalArrow.classList.remove("none");
 
@@ -297,7 +323,7 @@ btnOriginals.addEventListener("click", gaNaarOriginals);
 
 function gaNaarXiaoSpec() {
     stap2Xiao.classList.remove("none");
-    knoppenClmn.classList.add("none");
+    sec2Clmn.classList.add("none");
     btnStap1.classList.add("none");
     originalArrow.classList.remove("none");
 
@@ -306,20 +332,18 @@ btnXiaoSpec.addEventListener("click", gaNaarXiaoSpec);
 
 function originalTerug2Flavor() {
     stap2Originals.classList.add("none");
-    knoppenClmn.classList.remove("none");
+    sec2Clmn.classList.remove("none");
     originalArrow.classList.add("none");
     btnStap1.classList.remove("none");
 }
-
 originalArrow.addEventListener("click", originalTerug2Flavor);
 
 function XiaoSpecTerug2Flavor() {
     stap2Xiao.classList.add("none");
-    knoppenClmn.classList.remove("none");
+    sec2Clmn.classList.remove("none");
     xiaoArrow.classList.add("none");
     btnStap1.classList.remove("none");
 }
-
 originalArrow.addEventListener("click", XiaoSpecTerug2Flavor);
 
 // Original flavors
@@ -371,3 +395,71 @@ function stap2X4() {
     img2.src = "img/k-2-x-4.png";
 }
 XiaoSpecTteok.addEventListener("click", stap2X4);
+
+// Naar stap 3
+function naarStap3() {
+    if (img2.classList.contains("none")) {
+        
+    } else {
+        sec3Clmn.classList.remove("none");
+        stap2Originals.classList.add("none");
+        stap2Xiao.classList.add("none");
+        stap1Txt.textContent = "Stap 3: Topping";
+        btnStap3.classList.add("none");
+        btnStapGereed.classList.remove("none");
+
+        originalArrow.classList.add("none");
+        xiaoArrow.classList.add("none");
+        btnStap2Left.classList.remove("none");
+
+        sec2Clmn.classList.add("none");
+        btnStap1.classList.add("none");
+    }
+}
+btnStap3.addEventListener("click", naarStap3);
+
+function stap2Left() {
+    sec3Clmn.classList.add("none");
+    sec2Clmn.classList.remove("none");
+    stap1Txt.textContent = "Stap 2: Smaak";
+    btnStap1.classList.remove("none");
+    btnStap2Left.classList.add("none");
+    btnStapGereed.classList.add("none");
+    btnStap3.classList.remove("none");
+}
+btnStap2Left.addEventListener("click", stap2Left);
+
+// 2 flavor knoppen Stap 3
+function gaNaarOriginals3() {
+    stap3Originals.classList.remove("none");
+    sec3Clmn.classList.add("none");
+    btnStap2Left.classList.add("none");
+    originalArrow3.classList.remove("none");
+
+}
+btnOriginals3.addEventListener("click", gaNaarOriginals3);
+
+function gaNaarXiaoSpec3() {
+    stap3Xiao.classList.remove("none");
+    sec3Clmn.classList.add("none");
+    btnStap2Left.classList.add("none");
+    xiaoArrow3.classList.remove("none");
+
+}
+btnXiaoSpec3.addEventListener("click", gaNaarXiaoSpec3);
+
+function originalTerug3Flavor() {
+    stap3Originals.classList.add("none");
+    sec3Clmn.classList.remove("none");
+    originalArrow3.classList.add("none");
+    btnStap2Left.classList.remove("none");
+}
+originalArrow3.addEventListener("click", originalTerug3Flavor);
+
+function XiaoSpecTerug3Flavor() {
+    stap3Xiao.classList.add("none");
+    sec3Clmn.classList.remove("none");
+    xiaoArrow3.classList.add("none");
+    btnStap2Left.classList.remove("none");
+}
+xiaoArrow3.addEventListener("click", XiaoSpecTerug3Flavor);
