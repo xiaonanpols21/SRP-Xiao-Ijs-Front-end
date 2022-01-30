@@ -69,5 +69,9 @@ Volgende bronnen zijn gebruikte foto's.
 10. https://www.bouwhuis.com/njoy-krokante-nootjesdip-1000g
 11. https://nl.wikipedia.org/wiki/M%26M%27s
 12. https://www.gettyimages.nl/detail/foto/melted-milk-chocolate-royalty-free-beeld/164899112
+13. https://www.flaironline.nl/thuis/zo-smaakt-ijs-nog-lekkerder/
+14. https://indebuurt.nl/apeldoorn/eten-drinken/waar-in-apeldoorn-haal-je-het-beste-ijs~52427/ https://stock.adobe.com/nl/images/ice-cream-balls-with-colored-sugar-sprinkles-in-a-waffle-cone-on-a-blue-background-vanilla-ice-cream-in-a-waffle-cone/204914745
+15. https://www.webstaurantstore.com/chopped-mms-ice-cream-topping-10-lb/711MMS.html
+
 
 </details>

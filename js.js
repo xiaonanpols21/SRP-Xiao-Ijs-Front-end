@@ -482,7 +482,7 @@ xiaoArrow3.addEventListener("click", XiaoSpecTerug3Flavor);
 // Original flavors
 function stap3O1() {
     img3.classList.remove("none");
-    img3.src = "img/k-3-1.png";
+    img3.src = "img/k-3-x-1.png";
 }
 originalDisco.addEventListener("click", stap3O1);
 
