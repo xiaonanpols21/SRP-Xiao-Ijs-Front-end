@@ -55,6 +55,7 @@ Om JavaScript beter onder de knie te krijgen, maak ik oefeningen van het boek Du
 
 ## Bronnenlijst
 Gebruikte code van anderen is geschreven op zijn plek met Bron: ... erbij.
+Volgende bronnen zijn gebruikte foto's.
 <details>
 
 1. https://www.wikiwand.com/en/Magnum_(ice_cream)
@@ -64,5 +65,9 @@ Gebruikte code van anderen is geschreven op zijn plek met Bron: ... erbij.
 6. https://www.thespruceeats.com/making-the-most-of-sriracha-sauce-1328440
 7. https://www.shutterstock.com/vi/search/kim+chi
 8. https://nl.pinterest.com/pin/554998354060578089/
+9. https://www.bouwhuis.com/njoy-discodip-1800g
+10. https://www.bouwhuis.com/njoy-krokante-nootjesdip-1000g
+11. https://nl.wikipedia.org/wiki/M%26M%27s
+12. https://www.gettyimages.nl/detail/foto/melted-milk-chocolate-royalty-free-beeld/164899112
 
 </details>
