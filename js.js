@@ -50,7 +50,8 @@ var stap3Xiao = document.querySelector(".stap-3-xiao");
 
 // Juiste foto 
 var img1 = document.querySelector(".gekozen");
-var img2 = document.querySelector(".topping");
+var img2 = document.querySelector(".smaak");
+var img3 = document.querySelector(".topping");
 
 // 2 flavor knoppen
 var btnOriginals = document.querySelector(".stap-2-knoppen button:first-of-type");
@@ -62,6 +63,7 @@ var originalAardbei = document.querySelector(".orig-aardbei");
 var originalVanille = document.querySelector(".orig-vanille");
 var originalOreo = document.querySelector(".orig-oreo");
 
+// Xiao special flavors
 var XiaoSpecPizza = document.querySelector(".xiao-pizza");
 var XiaoSpecRijst = document.querySelector(".xiao-rijst");
 var XiaoSpecNoodles = document.querySelector(".xiao-noodles");
@@ -72,6 +74,18 @@ var XiaoSpecTteok = document.querySelector(".xiao-tteok");
 // 2 flavor knoppen Stap 3
 var btnOriginals3 = document.querySelector(".stap-3-knoppen button:first-of-type");
 var btnXiaoSpec3 = document.querySelector(".stap-3-knoppen button:last-of-type");
+
+// Original flavors
+var originalDisco = document.querySelector(".orig-disco");
+var originalNootjes = document.querySelector(".orig-nootjes");
+var originalMm = document.querySelector(".orig-mm");
+var originalXiaocoSaus = document.querySelector(".orig-xiaoco-saus");
+
+// Xiao special flavors
+var XiaoSpecKroepoek = document.querySelector(".xiao-kroepoek");
+var XiaoSpecSrir = document.querySelector(".xiao-srir");
+var XiaoSpecKimchi = document.querySelector(".xiao-kimchi");
+var XiaoSpecOreoPocky = document.querySelector(".xiao-oreo-pocky");
 
 // ************************************************ //
 // Footer
@@ -310,6 +324,7 @@ stap3Xiao.classList.add("none");
 
 // Juiste foto
 img2.classList.add("none");
+img3.classList.add("none");
 
 // 2 flavor knoppen
 function gaNaarOriginals() {
@@ -463,3 +478,28 @@ function XiaoSpecTerug3Flavor() {
     btnStap2Left.classList.remove("none");
 }
 xiaoArrow3.addEventListener("click", XiaoSpecTerug3Flavor);
+
+// Original flavors
+function stap3O1() {
+    img3.classList.remove("none");
+    img3.src = "img/k-3-1.png";
+}
+originalDisco.addEventListener("click", stap3O1);
+
+function stap2O2() {
+    img2.classList.remove("none");
+    img2.src = "img/k-2-o-2.png";
+}
+originalAardbei.addEventListener("click", stap2O2);
+
+function stap2O3() {
+    img2.classList.remove("none");
+    img2.src = "img/k-2-o-3.png";
+}
+originalVanille.addEventListener("click", stap2O3);
+
+function stap2O4() {
+    img2.classList.remove("none");
+    img2.src = "img/k-2-o-4.png";
+}
+originalOreo.addEventListener("click", stap2O4);
