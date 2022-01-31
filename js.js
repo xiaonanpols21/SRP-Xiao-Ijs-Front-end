@@ -90,6 +90,7 @@ var xiaocoResult = document.querySelector(".xiaoco-ijs-result");
 var popUpMin = document.querySelector(".card-bij-af button:first-of-type");
 var popUpPlus = document.querySelector(".card-bij-af button:last-of-type");
 var huidigXiaoIjs = 1;
+
 var aantalXiaoIjsTxt = document.querySelector(".card-aantal p");
 var trashChange = document.querySelector(".trash-change");
 var productDelete = document.querySelector(".product-delete");
@@ -541,7 +542,18 @@ XiaoSpecOreoPocky.addEventListener("click", stap3X4);
 
 // Pop up na Xiaoco ijs
 productDelete.classList.add("none");
-// xiaocoResult.classList.add("none");
+xiaocoResult.classList.add("none");
+
+function xiaocoIjsGereed() {
+    xiaocoResult.classList.remove("none");
+
+    aantalPro.classList.remove("none");
+    huidigBedrag = huidigBedrag + 3.50;
+    huidigAantal = huidigAantal + 1;
+    bedragTxt.textContent = financial(huidigBedrag);
+    huidigAantalTxt.textContent = huidigAantal;
+}
+btnStapGereed.addEventListener("click", xiaocoIjsGereed);
 
 function XiaoPlus() {
     huidigXiaoIjs = huidigXiaoIjs + 1;
@@ -550,6 +562,11 @@ function XiaoPlus() {
     if (huidigXiaoIjs == 2) {
         trashChange.src = "img/icon-min.svg";
     }
+
+    huidigBedrag = huidigBedrag + 3.50;
+    bedragTxt.textContent = financial(huidigBedrag);
+    huidigAantal = huidigAantal + 1;
+    huidigAantalTxt.textContent = huidigAantal;
 }
 popUpPlus.addEventListener("click", XiaoPlus);
 
@@ -564,6 +581,11 @@ function XiaoMin() {
     if (huidigXiaoIjs <= 0) {
         productDelete.classList.remove("none");
     }
+
+    huidigBedrag = huidigBedrag - 3.50;
+    bedragTxt.textContent = financial(huidigBedrag);
+    huidigAantal = huidigAantal - 1;
+    huidigAantalTxt.textContent = huidigAantal;
 }
 popUpMin.addEventListener("click", XiaoMin);
 
@@ -575,5 +597,14 @@ prodAnnuleren.addEventListener("click", prodAnnul);
 function prodVerw() {
     productDelete.classList.add("none");
     xiaocoResult.classList.add("none");
+    secS2.classList.add("none");
+    secS1.classList.remove("none");
+    stap1Txt.textContent = "Stap 1: Hoorntje of bakje?";
+    btnStapGereed.classList.add("none");
+    // btnStap2.classList.remove("none");
+    xiaoArrow3.classList.add("none");
+
+    footer.classList.add("footer-JS");
+    bar.classList.add("marginR30");
 }
 prodVerwijderen.addEventListener("click", prodVerw);
