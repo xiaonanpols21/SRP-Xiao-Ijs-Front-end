@@ -21,6 +21,7 @@
     --white-color: white;
     --black-color: black;
     --grey-txt-color: #504A4E;
+    --grey-pop-up: rgba(0, 0, 0, 0.25);
 }
 
 body {
@@ -103,11 +104,27 @@ h3 {
     cursor: pointer;
 }
 
+.btn-2:active {
+    background-color: var(--dark-pink-color);
+}
+
 .arrow-left {
     width: 111.92px;
 }
 
-.btn-2:active {
+.btn-3 {
+    padding: 30px;
+    width: 100%;
+    border: none;
+    border-radius: 50px;
+    background-color: var(--pink-color);
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--white-color);
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.btn-3:active {
     background-color: var(--dark-pink-color);
 }
 
@@ -604,8 +621,108 @@ footer {
     position: absolute;
 }
 
-/* Originals */
+/* Xiaoco Ijs pop-up */
+.xiaoco-pop-up {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--grey-pop-up);
+}
 
+.pop-up-card {
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 40px 30px;
+    width: 407px;
+    border-radius: 20px;
+    background-color: var(--white-color);
+    box-shadow: 0px 0px 10px var(--grey-pop-up);
+}
+
+.gekozen-frame-card {
+    position: relative;
+    height: 180px;
+}
+
+.gekozen-frame-card img {
+    position: absolute;
+    height: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+} 
+
+.pop-up-card h2 {
+    margin-bottom: 20px;
+    font-size: 34px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.pop-up-card p {
+    font-size: 42px;
+    font-weight: bold;
+    text-align: right;
+}
+
+.card-bij-af {
+    display: flex;
+    margin: 30px 0px 40px 0px;
+}
+
+.btn-bij-af {
+    height: 80px;
+    width: 110px;
+    border: none;
+    background-color: var(--purple-color);
+}
+
+.btn-bij-af img {
+    height: 25px;
+}
+
+.card-bij-af button:first-of-type {
+    border-radius: 20px 0px 0px 20px;
+}
+
+.card-bij-af button:last-of-type {
+    border-radius: 0px 20px 20px 0px;
+}
+
+.card-aantal {
+    width: 127px;
+    height: 80px;
+    background-color: var(--pink-15);
+}
+
+.card-aantal p {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: normal;
+    text-align: center;
+}
+
+/* Cross btn */
+.btn-cross {
+    position: absolute;
+    top: -30px;
+    right: -30px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--green-color);
+    box-shadow: 0px 0px 10px var(--grey-pop-up);
+}
+
+.btn-cross img {
+    transform: rotate(45deg);
+    height: 32px;
+}
 
 /* JS code */
 /* Footer knop links weg */

@@ -69,8 +69,6 @@ var XiaoSpecRijst = document.querySelector(".xiao-rijst");
 var XiaoSpecNoodles = document.querySelector(".xiao-noodles");
 var XiaoSpecTteok = document.querySelector(".xiao-tteok");
 
-// Naar stap 3
-
 // 2 flavor knoppen Stap 3
 var btnOriginals3 = document.querySelector(".stap-3-knoppen button:first-of-type");
 var btnXiaoSpec3 = document.querySelector(".stap-3-knoppen button:last-of-type");
@@ -86,6 +84,36 @@ var XiaoSpecKroepoek = document.querySelector(".xiao-kroepoek");
 var XiaoSpecSrir = document.querySelector(".xiao-srir");
 var XiaoSpecKimchi = document.querySelector(".xiao-kimchi");
 var XiaoSpecOreoPocky = document.querySelector(".xiao-oreo-pocky");
+
+// Pop-up Na Xiaoco Ijs
+var popUpMin = document.querySelector(".card-bij-af button:first-of-type");
+var popUpPlus = document.querySelector(".card-bij-af button:last-of-type");
+var huidigXiaoIjs = 0;
+var aantalXiaoIjsTxt = document.querySelector(".card-aantal p");
+var trashChange = document.querySelector(".trash-change");
+
+function XiaoPlus() {
+    huidigXiaoIjs = huidigXiaoIjs + 1;
+    aantalXiaoIjsTxt.textContent = huidigXiaoIjs;
+    trashChange.src = "img/icon-min.svg";
+}
+popUpPlus.addEventListener("click", XiaoPlus);
+
+function XiaoMin() {
+
+    huidigXiaoIjs = huidigXiaoIjs - 1;
+    aantalXiaoIjsTxt.textContent = huidigXiaoIjs;
+
+    if (huidigXiaoIjs == 0) {
+        trashChange.src = "img/icon-trash.svg";
+    }
+
+    if (huidigXiaoIjs < 1) {
+        huidigXiaoIjs = 0;
+    }
+}
+popUpMin.addEventListener("click", XiaoMin);
+
 
 // ************************************************ //
 // Footer
