@@ -86,32 +86,16 @@ var XiaoSpecKimchi = document.querySelector(".xiao-kimchi");
 var XiaoSpecOreoPocky = document.querySelector(".xiao-oreo-pocky");
 
 // Pop-up Na Xiaoco Ijs
+var xiaocoResult = document.querySelector(".xiaoco-ijs-result");
 var popUpMin = document.querySelector(".card-bij-af button:first-of-type");
 var popUpPlus = document.querySelector(".card-bij-af button:last-of-type");
 var huidigXiaoIjs = 1;
 var aantalXiaoIjsTxt = document.querySelector(".card-aantal p");
 var trashChange = document.querySelector(".trash-change");
+var productDelete = document.querySelector(".product-delete");
 
-function XiaoPlus() {
-    huidigXiaoIjs = huidigXiaoIjs + 1;
-    aantalXiaoIjsTxt.textContent = huidigXiaoIjs;
-
-    if (huidigXiaoIjs == 2) {
-        trashChange.src = "img/icon-min.svg";
-    }
-}
-popUpPlus.addEventListener("click", XiaoPlus);
-
-function XiaoMin() {
-    huidigXiaoIjs = huidigXiaoIjs - 1;
-    aantalXiaoIjsTxt.textContent = huidigXiaoIjs;
-
-    if (huidigXiaoIjs == 1) {
-        trashChange.src = "img/icon-trash.svg";
-    }
-}
-popUpMin.addEventListener("click", XiaoMin);
-
+var prodAnnuleren = document.querySelector("#annuleren");
+var prodVerwijderen = document.querySelector("#verwijderen");
 
 // ************************************************ //
 // Footer
@@ -554,3 +538,42 @@ function stap3X4() {
     img3.src = "img/k-3-x-4.png";
 }
 XiaoSpecOreoPocky.addEventListener("click", stap3X4);
+
+// Pop up na Xiaoco ijs
+productDelete.classList.add("none");
+// xiaocoResult.classList.add("none");
+
+function XiaoPlus() {
+    huidigXiaoIjs = huidigXiaoIjs + 1;
+    aantalXiaoIjsTxt.textContent = huidigXiaoIjs;
+
+    if (huidigXiaoIjs == 2) {
+        trashChange.src = "img/icon-min.svg";
+    }
+}
+popUpPlus.addEventListener("click", XiaoPlus);
+
+function XiaoMin() {
+    huidigXiaoIjs = huidigXiaoIjs - 1;
+    aantalXiaoIjsTxt.textContent = huidigXiaoIjs;
+
+    if (huidigXiaoIjs == 1) {
+        trashChange.src = "img/icon-trash.svg";
+    }
+
+    if (huidigXiaoIjs <= 0) {
+        productDelete.classList.remove("none");
+    }
+}
+popUpMin.addEventListener("click", XiaoMin);
+
+function prodAnnul() {
+    productDelete.classList.add("none");
+}
+prodAnnuleren.addEventListener("click", prodAnnul);
+
+function prodVerw() {
+    productDelete.classList.add("none");
+    xiaocoResult.classList.add("none");
+}
+prodVerwijderen.addEventListener("click", prodVerw);

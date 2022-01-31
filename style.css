@@ -108,6 +108,18 @@ h3 {
     background-color: var(--dark-pink-color);
 }
 
+.btn-sec {
+    background-color: transparent;
+    border: 1px solid var(--pink-color);
+    color: var(--pink-color);
+}
+
+.btn-sec:active {
+    background-color: transparent;
+    border: 1px solid var(--dark-pink-color);
+    color: var(--dark-pink-color);
+}
+
 .arrow-left {
     width: 111.92px;
 }
