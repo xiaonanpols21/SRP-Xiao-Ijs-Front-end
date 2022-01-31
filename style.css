@@ -622,7 +622,7 @@ footer {
 }
 
 /* Xiaoco Ijs pop-up */
-.xiaoco-pop-up {
+.pop-up {
     position: absolute;
     top: 0;
     left: 0;
@@ -723,6 +723,18 @@ footer {
     transform: rotate(45deg);
     height: 32px;
 }
+
+/* Porduct verwijderen */
+.product-delete h2 {
+    font-size: 18px;
+    line-height: 30px;
+}
+
+.product-delete div {
+    display: flex;
+    justify-content: space-between;
+}
+
 
 /* JS code */
 /* Footer knop links weg */

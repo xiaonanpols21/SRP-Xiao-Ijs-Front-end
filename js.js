@@ -88,28 +88,26 @@ var XiaoSpecOreoPocky = document.querySelector(".xiao-oreo-pocky");
 // Pop-up Na Xiaoco Ijs
 var popUpMin = document.querySelector(".card-bij-af button:first-of-type");
 var popUpPlus = document.querySelector(".card-bij-af button:last-of-type");
-var huidigXiaoIjs = 0;
+var huidigXiaoIjs = 1;
 var aantalXiaoIjsTxt = document.querySelector(".card-aantal p");
 var trashChange = document.querySelector(".trash-change");
 
 function XiaoPlus() {
     huidigXiaoIjs = huidigXiaoIjs + 1;
     aantalXiaoIjsTxt.textContent = huidigXiaoIjs;
-    trashChange.src = "img/icon-min.svg";
+
+    if (huidigXiaoIjs == 2) {
+        trashChange.src = "img/icon-min.svg";
+    }
 }
 popUpPlus.addEventListener("click", XiaoPlus);
 
 function XiaoMin() {
-
     huidigXiaoIjs = huidigXiaoIjs - 1;
     aantalXiaoIjsTxt.textContent = huidigXiaoIjs;
 
-    if (huidigXiaoIjs == 0) {
+    if (huidigXiaoIjs == 1) {
         trashChange.src = "img/icon-trash.svg";
-    }
-
-    if (huidigXiaoIjs < 1) {
-        huidigXiaoIjs = 0;
     }
 }
 popUpMin.addEventListener("click", XiaoMin);
