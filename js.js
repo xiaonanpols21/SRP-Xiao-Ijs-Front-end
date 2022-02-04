@@ -601,10 +601,11 @@ function prodVerw() {
     secS1.classList.remove("none");
     stap1Txt.textContent = "Stap 1: Hoorntje of bakje?";
     btnStapGereed.classList.add("none");
-    // btnStap2.classList.remove("none");
     xiaoArrow3.classList.add("none");
 
     footer.classList.add("footer-JS");
     bar.classList.add("marginR30");
+    
+    btnStap2.classList.remove("none");
 }
 prodVerwijderen.addEventListener("click", prodVerw);
