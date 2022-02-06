@@ -762,7 +762,7 @@ footer {
 .jouw-product {
     display: flex;
     gap: calc(20px + 35px);
-    padding: 20px;
+    padding: 15px;
     border-radius: 20px;
     background-color: var(--purple-25);
 }
@@ -793,12 +793,13 @@ footer {
 .toevoeg-producten {
     display: flex;
     flex-wrap: wrap;
-    gap: 50px;
+    gap: 30px;
     justify-content: center;
-    margin: 30px 0px;
+    margin: 20px 0px;
 }
 
 .toevoeg-single {
+    position: relative;
     display: flex;
     flex-direction: column;
 }
@@ -822,11 +823,11 @@ footer {
 }
 
 .toevoeg-check {
-    position: relative;
-    width: 35px;
-    height: 35px;
-    font-size: 15px;
-    border: none;
+    position: absolute;
+    right: 0;
+    width: 25px;
+    height: 25px;
+    font-size: 10px;
     border-radius: 50px;
     background-color: var(--pink-color);
     color: var(--white-color);
@@ -855,6 +856,10 @@ footer {
 
 .keuze1Changed {
     border: 5px solid var(--pink-color);
+}
+
+.text-color-pink {
+    color: var(--pink-color);
 }
 
 /* Responsive */

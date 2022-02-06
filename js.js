@@ -101,6 +101,17 @@ var prodVerwijderen = document.querySelector("#verwijderen");
 var btnCross = document.querySelector(".btn-cross");
 var btnGereed = document.querySelector("#gereed");
 
+// Wat erbij pop-up
+var check1 = document.querySelector(".check-1");
+var check2 = document.querySelector(".check-2");
+var check3 = document.querySelector(".check-3");
+var check4 = document.querySelector(".check-4");
+
+var toevoeg1 = document.querySelector(".toevoeg-1");
+var toevoeg2 = document.querySelector(".toevoeg-2");
+var toevoeg3 = document.querySelector(".toevoeg-3");
+var toevoeg4 = document.querySelector(".toevoeg-4");
+
 // ************************************************ //
 // Footer
 btnStap1.classList.add("none");
@@ -654,3 +665,47 @@ function popUpGereed() {
     pandaImg.classList.remove("panda-img-add-1");
 }
 btnGereed.addEventListener("click", popUpGereed);
+
+// Wat erbij pop-up
+check1.classList.add("none");
+check2.classList.add("none");
+check3.classList.add("none");
+check4.classList.add("none");
+
+// function toevoegPr1() {
+//     check1.classList.remove("none");
+//     toevoeg1.classList.add("text-color-pink");
+// }
+// toevoeg1.addEventListener("click", toevoegPr1);
+
+
+// function toevoegPr2() {
+//     check2.classList.remove("none");
+//     toevoeg2.classList.add("text-color-pink");
+// }
+// toevoeg2.addEventListener("click", toevoegPr2);
+
+// function toevoegPr1() {
+//     check1.classList.toggle("none");
+//     toevoeg1.classList.toggle("text-color-pink");
+// }
+// toevoeg1.addEventListener("click", toevoegPr1);
+
+// Bron: https://stackoverflow.com/questions/34559238/make-an-onclick-event-react-different-when-click-second-time
+var firsClick = true;
+
+function toevoegPr1() {
+    if (firstClick) {
+        check1.classList.remove("none");
+        toevoeg1.classList.add("text-color-pink");
+
+        firstClick = false;
+    } else {
+        check1.classList.add("none");
+        toevoeg1.classList.remove("text-color-pink");
+        
+    }
+}
+
+toevoeg1.addEventListener("click", toevoegPr1);
+
