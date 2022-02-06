@@ -17,6 +17,7 @@
 
     --pink-15: #FEF3F5;
     --green-25: rgba(92, 193, 207, 0.25);
+    --purple-25: rgba(184, 155, 201, 0.25);
 
     --white-color: white;
     --black-color: black;
@@ -757,6 +758,86 @@ footer {
     justify-content: space-between;
 }
 
+/* Wat wil je erbij pop-up */
+.jouw-product {
+    display: flex;
+    gap: calc(20px + 35px);
+    padding: 20px;
+    border-radius: 20px;
+    background-color: var(--purple-25);
+}
+
+.jouw-product-img {
+    position: relative;
+    height: 80px;
+}
+
+.jouw-product img {
+    position: absolute;
+    height: 100%;
+} 
+
+.jouw-product-txt p:first-of-type {
+    font-size: 24px;
+    line-height: 40px;
+    font-weight: normal;
+}
+
+.jouw-product-txt p:last-of-type {
+    font-size: 18px;
+    line-height: 30px;
+    text-align: left;
+}
+
+/* Toevoeging single */
+.toevoeg-producten {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: center;
+    margin: 30px 0px;
+}
+
+.toevoeg-single {
+    display: flex;
+    flex-direction: column;
+}
+
+.toevoeg-single img {
+    order: -1;
+    height: 80px;
+    width: fit-content;
+    margin-bottom: 5px;
+}
+
+.toevoeg-single h3 {
+    width: 130px;
+    font-size: 20px;
+    font-weight: normal;
+}
+
+.toevoeg-single p {
+    font-size: 20px;
+    text-align: left;
+}
+
+.toevoeg-check {
+    position: relative;
+    width: 35px;
+    height: 35px;
+    font-size: 15px;
+    border: none;
+    border-radius: 50px;
+    background-color: var(--pink-color);
+    color: var(--white-color);
+}
+
+.toevoeg-check i {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
 
 /* JS code */
 /* Footer knop links weg */
