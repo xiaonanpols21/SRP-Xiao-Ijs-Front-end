@@ -102,6 +102,9 @@ var btnCross = document.querySelector(".btn-cross");
 var btnGereed = document.querySelector("#gereed");
 
 // Wat erbij pop-up
+var popUpWatErbij = document.querySelector(".wat-erbij");
+var gereedErbij = document.querySelector("#gereed-erbij");
+
 var check1 = document.querySelector(".check-1");
 var check2 = document.querySelector(".check-2");
 var check3 = document.querySelector(".check-3");
@@ -663,49 +666,132 @@ function popUpGereed() {
     pandaImg.classList.remove("panda-img-add-3");
     pandaImg.classList.remove("panda-img-add-2");
     pandaImg.classList.remove("panda-img-add-1");
+
+    // Bron: https://www.w3schools.com/jsref/met_win_settimeout.asp
+    setTimeout(function() {
+        popUpWatErbij.classList.remove("none");
+    }, 1000);
+    
 }
 btnGereed.addEventListener("click", popUpGereed);
 
 // Wat erbij pop-up
+popUpWatErbij.classList.add("none");
+
 check1.classList.add("none");
 check2.classList.add("none");
 check3.classList.add("none");
 check4.classList.add("none");
 
-// function toevoegPr1() {
-//     check1.classList.remove("none");
-//     toevoeg1.classList.add("text-color-pink");
-// }
-// toevoeg1.addEventListener("click", toevoegPr1);
-
-
-// function toevoegPr2() {
-//     check2.classList.remove("none");
-//     toevoeg2.classList.add("text-color-pink");
-// }
-// toevoeg2.addEventListener("click", toevoegPr2);
-
-// function toevoegPr1() {
-//     check1.classList.toggle("none");
-//     toevoeg1.classList.toggle("text-color-pink");
-// }
-// toevoeg1.addEventListener("click", toevoegPr1);
-
 // Bron: https://stackoverflow.com/questions/34559238/make-an-onclick-event-react-different-when-click-second-time
-var firsClick = true;
+var firstClick1 = true;
+var firstClick2 = true;
+var firstClick3 = true;
+var firstClick4 = true;
 
 function toevoegPr1() {
-    if (firstClick) {
+    aantalPro.classList.remove("none");
+    huidigXiaoIjs = huidigXiaoIjs + 1;
+    aantalXiaoIjsTxt.textContent = huidigXiaoIjs;
+
+    if (firstClick1) {
         check1.classList.remove("none");
         toevoeg1.classList.add("text-color-pink");
-
-        firstClick = false;
+        huidigBedrag = huidigBedrag + 3;
+        bedragTxt.textContent = financial(huidigBedrag);
+        huidigAantal = huidigAantal + 1;
+        huidigAantalTxt.textContent = huidigAantal;
+        firstClick1 = false;
     } else {
         check1.classList.add("none");
         toevoeg1.classList.remove("text-color-pink");
-        
+
+        huidigBedrag = huidigBedrag - 3;
+        bedragTxt.textContent = financial(huidigBedrag);
+        huidigAantal = huidigAantal - 1;
+        huidigAantalTxt.textContent = huidigAantal;
     }
 }
-
 toevoeg1.addEventListener("click", toevoegPr1);
 
+function toevoegPr2() {
+    aantalPro.classList.remove("none");
+    huidigXiaoIjs = huidigXiaoIjs + 1;
+    aantalXiaoIjsTxt.textContent = huidigXiaoIjs;
+
+    if (firstClick2) {
+        check2.classList.remove("none");
+        toevoeg2.classList.add("text-color-pink");
+        firstClick2 = false;
+        huidigBedrag = huidigBedrag + 2.50;
+        bedragTxt.textContent = financial(huidigBedrag);
+        huidigAantal = huidigAantal + 1;
+        huidigAantalTxt.textContent = huidigAantal;
+        
+    } else {
+        check2.classList.add("none");
+        toevoeg2.classList.remove("text-color-pink");
+        huidigBedrag = huidigBedrag - 2.50;
+        bedragTxt.textContent = financial(huidigBedrag);
+        huidigAantal = huidigAantal - 1;
+        huidigAantalTxt.textContent = huidigAantal;
+    }
+}
+toevoeg2.addEventListener("click", toevoegPr2);
+
+function toevoegPr3() {
+    aantalPro.classList.remove("none");
+    huidigXiaoIjs = huidigXiaoIjs + 1;
+    aantalXiaoIjsTxt.textContent = huidigXiaoIjs;
+
+    if (firstClick3) {
+        check3.classList.remove("none");
+        toevoeg3.classList.add("text-color-pink");
+        firstClick3 = false;
+        huidigBedrag = huidigBedrag + 4;
+        bedragTxt.textContent = financial(huidigBedrag);
+        huidigAantal = huidigAantal + 1;
+        huidigAantalTxt.textContent = huidigAantal;
+    } else {
+        check3.classList.add("none");
+        toevoeg3.classList.remove("text-color-pink");
+        huidigBedrag = huidigBedrag - 4;
+        bedragTxt.textContent = financial(huidigBedrag);
+        huidigAantal = huidigAantal - 1;
+        huidigAantalTxt.textContent = huidigAantal;
+    }
+}
+toevoeg3.addEventListener("click", toevoegPr3);
+
+function toevoegPr4() {
+    aantalPro.classList.remove("none");
+    huidigXiaoIjs = huidigXiaoIjs + 1;
+    aantalXiaoIjsTxt.textContent = huidigXiaoIjs;
+
+    if (firstClick4) {
+        check4.classList.remove("none");
+        toevoeg4.classList.add("text-color-pink");
+        firstClick4 = false;
+        huidigBedrag = huidigBedrag + 1;
+        bedragTxt.textContent = financial(huidigBedrag);
+        huidigAantal = huidigAantal + 1;
+        huidigAantalTxt.textContent = huidigAantal;
+        
+    } else {
+        check4.classList.add("none");
+        toevoeg4.classList.remove("text-color-pink");
+        huidigBedrag = huidigBedrag - 1;
+        bedragTxt.textContent = financial(huidigBedrag);
+        huidigAantal = huidigAantal - 1;
+        huidigAantalTxt.textContent = huidigAantal;
+        // Als je op het product klikt, gaat het bedrag en aantal naar de min. Dit zou niet moeten
+    }
+}
+toevoeg4.addEventListener("click", toevoegPr4);
+// Op dit moment kan je alleen nog aanvinken en weg halen. Eigenlijk zou het moeten zijn dat je de hele tijd kan aanvinken en weg halen.
+
+function erbijPopUpWeg() {
+    popUpWatErbij.classList.add("none");
+}
+
+gereedErbij.addEventListener("click", erbijPopUpWeg);
