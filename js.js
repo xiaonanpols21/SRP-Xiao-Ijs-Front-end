@@ -98,6 +98,9 @@ var productDelete = document.querySelector(".product-delete");
 var prodAnnuleren = document.querySelector("#annuleren");
 var prodVerwijderen = document.querySelector("#verwijderen");
 
+var btnCross = document.querySelector(".btn-cross");
+var btnGereed = document.querySelector("#gereed");
+
 // ************************************************ //
 // Footer
 btnStap1.classList.add("none");
@@ -309,6 +312,10 @@ function naarStap2() {
         stap1Txt.textContent = "Stap 2: Smaak";
     }
 
+    stap3Xiao.classList.add("none");
+    sec2Clmn.classList.remove("none");
+    img3.classList.add("none");
+
 }
 btnStap2.addEventListener("click", naarStap2);
 
@@ -324,6 +331,7 @@ function terugSec1() {
 
     pandaImg.classList.remove("panda-img-add-1"); 
     stap1Txt.textContent = "Stap 1: Hoorntje of bakje?";
+    pandaImg.classList.remove("panda-img-add-1"); 
 }
 btnStap1.addEventListener("click", terugSec1);
 
@@ -440,6 +448,7 @@ function naarStap3() {
 
         sec2Clmn.classList.add("none");
         btnStap1.classList.add("none");
+        pandaImg.classList.add("panda-img-add-2"); 
     }
 }
 btnStap3.addEventListener("click", naarStap3);
@@ -452,6 +461,7 @@ function stap2Left() {
     btnStap2Left.classList.add("none");
     btnStapGereed.classList.add("none");
     btnStap3.classList.remove("none");
+    pandaImg.classList.remove("panda-img-add-2"); 
 }
 btnStap2Left.addEventListener("click", stap2Left);
 
@@ -552,6 +562,7 @@ function xiaocoIjsGereed() {
     huidigAantal = huidigAantal + 1;
     bedragTxt.textContent = financial(huidigBedrag);
     huidigAantalTxt.textContent = huidigAantal;
+    pandaImg.classList.add("panda-img-add-3");
 }
 btnStapGereed.addEventListener("click", xiaocoIjsGereed);
 
@@ -605,7 +616,41 @@ function prodVerw() {
 
     footer.classList.add("footer-JS");
     bar.classList.add("marginR30");
-    
+
     btnStap2.classList.remove("none");
+    pandaImg.classList.remove("panda-img-add-3");
+    pandaImg.classList.remove("panda-img-add-2");
+    pandaImg.classList.remove("panda-img-add-1");
 }
 prodVerwijderen.addEventListener("click", prodVerw);
+
+function popUpWeg() {
+    xiaocoResult.classList.add("none");
+
+    huidigBedrag = huidigBedrag - 3.50;
+    bedragTxt.textContent = financial(huidigBedrag);
+    huidigAantal = huidigAantal - 1;
+    huidigAantalTxt.textContent = huidigAantal;
+
+    pandaImg.classList.remove("panda-img-add-3");
+    pandaImg.classList.remove("panda-img-add-2");
+    pandaImg.classList.remove("panda-img-add-1");
+}
+btnCross.addEventListener("click", popUpWeg);
+
+function popUpGereed() {
+    xiaocoResult.classList.add("none");
+    secS2.classList.add("none");
+    secS1.classList.remove("none");
+
+    footer.classList.add("footer-JS");
+    bar.classList.add("marginR30");
+    btnStapGereed.classList.add("none");
+    xiaoArrow3.classList.add("none");
+    btnStap2.classList.remove("none");
+
+    pandaImg.classList.remove("panda-img-add-3");
+    pandaImg.classList.remove("panda-img-add-2");
+    pandaImg.classList.remove("panda-img-add-1");
+}
+btnGereed.addEventListener("click", popUpGereed);

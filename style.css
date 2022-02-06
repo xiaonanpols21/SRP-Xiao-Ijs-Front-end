@@ -485,6 +485,16 @@ footer {
     transition: 1s;
 }
 
+.panda-img-add-2 {
+    transform: translateX(123px);
+    transition: 1s;
+}
+
+.panda-img-add-3 {
+    transform: translateX(185px);
+    transition: 1s;
+}
+
 .bar-img i {
     font-size: 20px;
     color: var(--pink-color);
