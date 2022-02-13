@@ -115,6 +115,10 @@ var toevoeg2 = document.querySelector(".toevoeg-2");
 var toevoeg3 = document.querySelector(".toevoeg-3");
 var toevoeg4 = document.querySelector(".toevoeg-4");
 
+// Merch
+var merchClmn = document.querySelector(".merch");
+var merchBtn = document.querySelector(".content nav ul li:last-of-type");
+
 // ************************************************ //
 // Footer
 btnStap1.classList.add("none");
@@ -793,5 +797,13 @@ toevoeg4.addEventListener("click", toevoegPr4);
 function erbijPopUpWeg() {
     popUpWatErbij.classList.add("none");
 }
-
 gereedErbij.addEventListener("click", erbijPopUpWeg);
+
+// Merch
+merchClmn.classList.add("none");
+
+function merchNav() {
+    secS1.classList.add("none");
+    merchClmn.classList.remove("none");
+}
+merchBtn.addEventListener("click", merchNav);

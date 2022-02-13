@@ -506,7 +506,7 @@ footer {
     height: 55px;
 }
 
-.stap-1 {
+.stap-1, .merch {
     margin-top: 10px;
     display: flex;
     flex-wrap: wrap;
