@@ -14,6 +14,9 @@ var xiaoArrow = document.querySelector(".xiaoBtn");
 var originalArrow3 = document.querySelector(".originalBtn3");
 var xiaoArrow3 = document.querySelector(".xiaoBtn3");
 
+var annulerenBtn = document.querySelector("#annuleren-btn");
+var bestelFtr = document.querySelector("#bestellen-footer-btn");
+
 //Winkelmand
 var aantalPro = document.querySelector(".winkelmand-hoeveel");
 var huidigAantalTxt = document.querySelector(".winkelmand-hoeveel p");
@@ -118,6 +121,7 @@ var toevoeg4 = document.querySelector(".toevoeg-4");
 // Merch
 var merchClmn = document.querySelector(".merch");
 var merchBtn = document.querySelector(".content nav ul li:last-of-type");
+var navFeed = document.querySelector(".nav-feed");
 
 // ************************************************ //
 // Footer
@@ -801,9 +805,18 @@ gereedErbij.addEventListener("click", erbijPopUpWeg);
 
 // Merch
 merchClmn.classList.add("none");
+annulerenBtn.classList.add("none");
+bestelFtr.classList.add("none");
 
 function merchNav() {
     secS1.classList.add("none");
     merchClmn.classList.remove("none");
+    navFeed.classList.add("nav-merch-feed");
+    
+    bar.classList.add("none");
+    btnStap2.classList.add("none");
+    annulerenBtn.classList.remove("none");
+    bestelFtr.classList.remove("none");
+    footer.classList.add("just-space-btwn");
 }
 merchBtn.addEventListener("click", merchNav);
