@@ -118,10 +118,14 @@ var toevoeg2 = document.querySelector(".toevoeg-2");
 var toevoeg3 = document.querySelector(".toevoeg-3");
 var toevoeg4 = document.querySelector(".toevoeg-4");
 
-// Merch
+// Nav
+var navFeed = document.querySelector(".nav-feed");
 var merchClmn = document.querySelector(".merch");
 var merchBtn = document.querySelector(".content nav ul li:last-of-type");
-var navFeed = document.querySelector(".nav-feed");
+var xiaocoIjsBtnNav = document.querySelector(".content nav ul li:nth-of-type(3)");
+
+var h1 = document.querySelector("h1");
+var xiaocoIjs350 = document.querySelector(".xiaoco-ijs-350");
 
 // ************************************************ //
 // Footer
@@ -818,5 +822,26 @@ function merchNav() {
     annulerenBtn.classList.remove("none");
     bestelFtr.classList.remove("none");
     footer.classList.add("just-space-btwn");
+
+    h1.textContent = "Merchandise";
+    stap1Txt.classList.add("none");
+    xiaocoIjs350.classList.add("none");
 }
 merchBtn.addEventListener("click", merchNav);
+
+function xiaocoIjsNav() {
+    bar.classList.remove("none");
+    annulerenBtn.classList.add("none");
+    btnStap2.classList.remove("none");
+    bestelFtr.classList.add("none");
+    footer.classList.remove("just-space-btwn");
+
+    secS1.classList.remove("none");
+    merchClmn.classList.add("none");
+    navFeed.classList.remove("nav-merch-feed");
+
+    h1.textContent = "Maak je eigen Xiaoco Ijs";
+    stap1Txt.classList.remove("none");
+    xiaocoIjs350.classList.remove("none");
+}
+xiaocoIjsBtnNav.addEventListener("click", xiaocoIjsNav);
