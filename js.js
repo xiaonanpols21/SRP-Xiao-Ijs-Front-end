@@ -127,6 +127,12 @@ var xiaocoIjsBtnNav = document.querySelector(".content nav ul li:nth-of-type(3)"
 var h1 = document.querySelector("h1");
 var xiaocoIjs350 = document.querySelector(".xiaoco-ijs-350");
 
+// Merch toevoegen
+var merch1 = document.querySelector("#merch-1");
+var merch2 = document.querySelector("#merch-2");
+var merch3 = document.querySelector("#merch-3");
+var merch4 = document.querySelector("#merch-4");
+
 // ************************************************ //
 // Footer
 btnStap1.classList.add("none");
@@ -845,3 +851,99 @@ function xiaocoIjsNav() {
     xiaocoIjs350.classList.remove("none");
 }
 xiaocoIjsBtnNav.addEventListener("click", xiaocoIjsNav);
+
+// Merch toevoegen
+var merchFirst1 = true;
+var merchFirst2 = true;
+var merchFirst3 = true;
+var merchFirst4 = true;
+
+function merchToevoeg1() {
+    aantalPro.classList.remove("none");
+    huidigXiaoIjs = huidigXiaoIjs + 1;
+    aantalXiaoIjsTxt.textContent = huidigXiaoIjs;
+
+    if (merchFirst1) {
+        merch1.classList.add("keuze1Changed");
+        merchFirst1 = false;
+        huidigBedrag = huidigBedrag + 2.5;
+        bedragTxt.textContent = financial(huidigBedrag);
+        huidigAantal = huidigAantal + 1;
+        huidigAantalTxt.textContent = huidigAantal;
+    } else {
+        merch1.classList.remove("keuze1Changed");
+        huidigBedrag = huidigBedrag - 2.5;
+        bedragTxt.textContent = financial(huidigBedrag);
+        huidigAantal = huidigAantal - 1;
+        huidigAantalTxt.textContent = huidigAantal;
+    }
+}
+merch1.addEventListener("click", merchToevoeg1);
+
+function merchToevoeg2() {
+    aantalPro.classList.remove("none");
+    huidigXiaoIjs = huidigXiaoIjs + 1;
+    aantalXiaoIjsTxt.textContent = huidigXiaoIjs;
+
+    if (merchFirst2) {
+        merch2.classList.add("keuze1Changed");
+        merchFirst2 = false;
+        huidigBedrag = huidigBedrag + 1.5;
+        bedragTxt.textContent = financial(huidigBedrag);
+        huidigAantal = huidigAantal + 1;
+        huidigAantalTxt.textContent = huidigAantal;
+    } else {
+        merch2.classList.remove("keuze1Changed");
+        huidigBedrag = huidigBedrag - 1.5;
+        bedragTxt.textContent = financial(huidigBedrag);
+        huidigAantal = huidigAantal - 1;
+        huidigAantalTxt.textContent = huidigAantal;
+    }
+}
+merch2.addEventListener("click", merchToevoeg2);
+
+function merchToevoeg3() {
+    aantalPro.classList.remove("none");
+    huidigXiaoIjs = huidigXiaoIjs + 1;
+    aantalXiaoIjsTxt.textContent = huidigXiaoIjs;
+
+    if (merchFirst3) {
+        merch3.classList.add("keuze1Changed");
+        merchFirst3 = false;
+        huidigBedrag = huidigBedrag + 1.5;
+        bedragTxt.textContent = financial(huidigBedrag);
+        huidigAantal = huidigAantal + 1;
+        huidigAantalTxt.textContent = huidigAantal;
+    } else {
+        merch3.classList.remove("keuze1Changed");
+        huidigBedrag = huidigBedrag - 1.5;
+        bedragTxt.textContent = financial(huidigBedrag);
+        huidigAantal = huidigAantal - 1;
+        huidigAantalTxt.textContent = huidigAantal;
+    }
+}
+merch3.addEventListener("click", merchToevoeg3);
+
+function merchToevoeg4() {
+    aantalPro.classList.remove("none");
+    huidigXiaoIjs = huidigXiaoIjs + 1;
+    aantalXiaoIjsTxt.textContent = huidigXiaoIjs;
+
+    if (merchFirst4) {
+        merch4.classList.add("keuze1Changed");
+        merchFirst4 = false;
+        huidigBedrag = huidigBedrag + 1.5;
+        bedragTxt.textContent = financial(huidigBedrag);
+        huidigAantal = huidigAantal + 1;
+        huidigAantalTxt.textContent = huidigAantal;
+    } else {
+        merch4.classList.remove("keuze1Changed");
+        huidigBedrag = huidigBedrag - 1.5;
+        bedragTxt.textContent = financial(huidigBedrag);
+        huidigAantal = huidigAantal - 1;
+        huidigAantalTxt.textContent = huidigAantal;
+        // Als je op het product klikt, gaat het bedrag en aantal naar de min. Dit zou niet moeten
+    }
+}
+merch4.addEventListener("click", merchToevoeg4);
+// Op dit moment kan je alleen nog aanvinken en weg halen. Eigenlijk zou het moeten zijn dat je de hele tijd kan aanvinken en weg halen.

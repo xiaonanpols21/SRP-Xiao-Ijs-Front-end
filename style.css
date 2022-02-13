@@ -843,32 +843,6 @@ footer {
     transform: translate(-50%, -50%);
 }
 
-/* JS code */
-/* Footer knop links weg */
-.none {
-    display: none;
-}
-
-.footer-JS {
-    justify-content: flex-end;
-}
-
-.marginR30 {
-    margin-right: 30px;
-}
-
-.keuze1Changed {
-    border: 5px solid var(--pink-color);
-}
-
-.text-color-pink {
-    color: var(--pink-color);
-}
-
-.just-space-btwn {
-    justify-content: space-between;
-}
-
 /* Merch */
 .merch-img {
     height: 60px;
@@ -905,6 +879,90 @@ footer {
 
 .merch .figure-s-1 img {
     bottom: 40%;
+}
+
+/* Jouw bestelling */
+.order-row {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.order-foto {
+    order: -1;
+    height: 72px;
+    width: 68px;
+    margin-right: 20px;
+}
+
+.order-data h3 {
+    font-weight: normal;
+    font-size: 20px;
+    width: max-content;
+}
+
+.order-data p {
+    font-size: 20px;
+    text-align: left;
+}
+
+/* Er bij er af button */
+.card-mini {
+    position: relative;
+    right: 37px;
+    margin: 0px;
+    align-self: flex-end;
+}
+
+.ba-mini {
+    width: 50px;
+    height: 40px;
+}
+
+.ba-mini img {
+    height: 15px;
+}
+
+.card-mini button:first-of-type {
+    border-radius: 10px 0px 0px 10px;
+}
+
+.card-mini button:last-of-type {
+    border-radius: 0px 10px 10px 0px;
+}
+
+.mini-aantal {
+    height: 40px;
+    width: 38px;
+}
+
+.mini-aantal p {
+    font-size: 20px;
+}
+
+/* JS code */
+/* Footer knop links weg */
+.none {
+    display: none;
+}
+
+.footer-JS {
+    justify-content: flex-end;
+}
+
+.marginR30 {
+    margin-right: 30px;
+}
+
+.keuze1Changed {
+    border: 5px solid var(--pink-color);
+}
+
+.text-color-pink {
+    color: var(--pink-color);
+}
+
+.just-space-btwn {
+    justify-content: space-between;
 }
 
 /* Responsive */
