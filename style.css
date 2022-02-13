@@ -862,6 +862,32 @@ footer {
     color: var(--pink-color);
 }
 
+/* Merch */
+.merch-img {
+    height: 65px;
+}
+
+.merch .figure-s-1:last-of-type img {
+    height: 45px;
+}
+
+.fig-merch {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.fig-merch p {
+    font-size: 20px;
+}
+
+.fig-merch p:first-of-type {
+    font-weight: normal;
+}
+
 /* Responsive */
 @media only screen and (min-height: 900px) {
     main {
@@ -915,6 +941,15 @@ footer {
     }
     
     .stap-1 .figure-s-1:nth-of-type(5) img {
+        height: 57px;
+    }
+
+    /* Merch */
+    .merch-img {
+        height: 90px;
+    }
+
+    .merch .figure-s-1:last-of-type img {
         height: 57px;
     }
 }
