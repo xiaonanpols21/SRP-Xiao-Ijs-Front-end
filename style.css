@@ -34,6 +34,10 @@ a {
     text-decoration: none;
 }
 
+.overlap {
+    padding: 1px;
+}
+
 main {
     position: relative;
     width: 507px;
@@ -883,32 +887,33 @@ footer {
 
 /* Jouw bestelling */
 .order-row {
-    display: flex;
+    display: grid;
+    grid-template-columns: 68px 1fr;
+    gap: 10px;
+    position: relative;
     margin-bottom: 30px;
 }
 
 .order-foto {
     order: -1;
     height: 72px;
-    width: 68px;
-    margin-right: 20px;
 }
 
 .order-data h3 {
-    font-weight: normal;
     font-size: 20px;
-    width: max-content;
+    font-weight: normal;
 }
 
 .order-data p {
     font-size: 20px;
+    font-weight: bold;
     text-align: left;
 }
 
 /* Er bij er af button */
 .card-mini {
-    position: relative;
-    right: 37px;
+    position: absolute;
+    right: 0;
     margin: 0px;
     align-self: flex-end;
 }
@@ -937,6 +942,17 @@ footer {
 
 .mini-aantal p {
     font-size: 20px;
+}
+
+.winkelmand-totaal {
+    display: flex;
+    justify-content: flex-end;
+    gap: 30px;
+    margin: 10px 0px 40px 0px;
+}
+
+.winkelmand-totaal p:first-of-type {
+    font-weight: normal;
 }
 
 /* JS code */

@@ -133,6 +133,10 @@ var merch2 = document.querySelector("#merch-2");
 var merch3 = document.querySelector("#merch-3");
 var merch4 = document.querySelector("#merch-4");
 
+// Winkelmand result
+var winkelmandPopUp = document.querySelector(".winkelmand-result");
+// winkelmandPopUp.classList.add("none");
+
 // ************************************************ //
 // Footer
 btnStap1.classList.add("none");
