@@ -145,6 +145,21 @@ h3 {
     background-color: var(--dark-pink-color);
 }
 
+.btn-4 {
+    padding: 20px 30px;
+    width: fit-content;
+    border-radius: 50px;
+    border: none;
+    background-color: var(--green-color);
+    font-size: 18px;
+    font-family: 'Josefin Sans', sans-serif;
+    color: var(--white-color);
+}
+
+.btn-4:active {
+    background-color: var(--dark-green-color);
+}
+
 /* Startpagina Index.html */
 .start-main {
     position: relative;
@@ -899,6 +914,11 @@ footer {
     height: 72px;
 }
 
+.order-data {
+    grid-column-start: 2;
+    grid-column-end: 4;
+}
+
 .order-data h3 {
     font-size: 20px;
     font-weight: normal;
@@ -912,10 +932,11 @@ footer {
 
 /* Er bij er af button */
 .card-mini {
-    position: absolute;
     right: 0;
     margin: 0px;
     align-self: flex-end;
+    grid-row: 2;
+    grid-column-start: 3;
 }
 
 .ba-mini {
@@ -951,8 +972,18 @@ footer {
     margin: 10px 0px 40px 0px;
 }
 
-.winkelmand-totaal p:first-of-type {
+.winkelmand-totaal div {
+    display: flex;
+}
+
+.pop-up-card .totaal {
     font-weight: normal;
+}
+
+.order-row .btn-4 {
+    grid-row: 3;
+    grid-column-start: 3;
+    margin-top: 5px;
 }
 
 /* JS code */

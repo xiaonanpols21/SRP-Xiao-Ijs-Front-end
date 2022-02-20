@@ -17,7 +17,9 @@ var xiaoArrow3 = document.querySelector(".xiaoBtn3");
 var annulerenBtn = document.querySelector("#annuleren-btn");
 var bestelFtr = document.querySelector("#bestellen-footer-btn");
 
-//Winkelmand
+// Winkelmand
+var winkelmandBtn = document.querySelector(".winkelmand-btn");
+var winkelmandCross = document.querySelector("#cross-winkelmand")
 var aantalPro = document.querySelector(".winkelmand-hoeveel");
 var huidigAantalTxt = document.querySelector(".winkelmand-hoeveel p");
 var huidigAantal = 0;
@@ -101,12 +103,13 @@ var productDelete = document.querySelector(".product-delete");
 var prodAnnuleren = document.querySelector("#annuleren");
 var prodVerwijderen = document.querySelector("#verwijderen");
 
-var btnCross = document.querySelector(".btn-cross");
+var crossXiaoco = document.querySelector("#cross-xiaocoijs");
 var btnGereed = document.querySelector("#gereed");
 
 // Wat erbij pop-up
 var popUpWatErbij = document.querySelector(".wat-erbij");
 var gereedErbij = document.querySelector("#gereed-erbij");
+var crossErbij = document.querySelector("#cross-erbij");
 
 var check1 = document.querySelector(".check-1");
 var check2 = document.querySelector(".check-2");
@@ -135,7 +138,14 @@ var merch4 = document.querySelector("#merch-4");
 
 // Winkelmand result
 var winkelmandPopUp = document.querySelector(".winkelmand-result");
-// winkelmandPopUp.classList.add("none");
+var winkelmandBedrag = document.querySelector("#totaal-bedrag");
+var huidigTotaal = 0;
+var erbijTxt = document.querySelector("#erbijTxt");
+var erbijFoto = document.querySelector("#erbij-foto");
+
+var orderOreo = document.querySelector("#order-oreo");
+var orderXiaocoIjs = document.querySelector("#order-xiaocoijs");
+var orderErbij = document.querySelector("#order-erbij");
 
 // ************************************************ //
 // Footer
@@ -177,8 +187,11 @@ function OreoPlus() {
     huidigAantal = huidigAantal + 1;
     huidigAantalTxt.textContent = huidigAantal;
     aantalPro.classList.remove("none");
-}
 
+    orderOreo.classList.remove("none");
+    huidigTotaal = huidigTotaal + 2.50;
+    winkelmandBedrag.textContent = financial(huidigTotaal);
+}
 specialBtn.addEventListener("click", OreoPlus);
 
 // Stap 1 keuze maken
@@ -672,7 +685,7 @@ function popUpWeg() {
     pandaImg.classList.remove("panda-img-add-2");
     pandaImg.classList.remove("panda-img-add-1");
 }
-btnCross.addEventListener("click", popUpWeg);
+crossXiaoco.addEventListener("click", popUpWeg);
 
 function popUpGereed() {
     xiaocoResult.classList.add("none");
@@ -688,6 +701,10 @@ function popUpGereed() {
     pandaImg.classList.remove("panda-img-add-3");
     pandaImg.classList.remove("panda-img-add-2");
     pandaImg.classList.remove("panda-img-add-1");
+
+    orderXiaocoIjs.classList.remove("none");
+    huidigTotaal = huidigTotaal + 3.50;
+    winkelmandBedrag.textContent = financial(huidigTotaal);
 
     // Bron: https://www.w3schools.com/jsref/met_win_settimeout.asp
     setTimeout(function() {
@@ -723,6 +740,11 @@ function toevoegPr1() {
         bedragTxt.textContent = financial(huidigBedrag);
         huidigAantal = huidigAantal + 1;
         huidigAantalTxt.textContent = huidigAantal;
+
+        orderErbij.classList.remove("none");
+        huidigTotaal = huidigTotaal + 3;
+        winkelmandBedrag.textContent = financial(huidigTotaal);
+
         firstClick1 = false;
     } else {
         check1.classList.add("none");
@@ -732,6 +754,10 @@ function toevoegPr1() {
         bedragTxt.textContent = financial(huidigBedrag);
         huidigAantal = huidigAantal - 1;
         huidigAantalTxt.textContent = huidigAantal;
+
+        orderErbij.classList.add("none");
+        huidigTotaal = huidigTotaal - 3;
+        winkelmandBedrag.textContent = financial(huidigTotaal);
     }
 }
 toevoeg1.addEventListener("click", toevoegPr1);
@@ -744,12 +770,18 @@ function toevoegPr2() {
     if (firstClick2) {
         check2.classList.remove("none");
         toevoeg2.classList.add("text-color-pink");
-        firstClick2 = false;
         huidigBedrag = huidigBedrag + 2.50;
         bedragTxt.textContent = financial(huidigBedrag);
         huidigAantal = huidigAantal + 1;
         huidigAantalTxt.textContent = huidigAantal;
-        
+
+        orderErbij.classList.remove("none");
+        huidigTotaal = huidigTotaal + 2.50;
+        winkelmandBedrag.textContent = financial(huidigTotaal);
+        erbijTxt.textContent = "Tas voor ijs";
+        erbijFoto.src = "img/toevoeg-pr-2.png";
+
+        firstClick2 = false;
     } else {
         check2.classList.add("none");
         toevoeg2.classList.remove("text-color-pink");
@@ -757,6 +789,10 @@ function toevoegPr2() {
         bedragTxt.textContent = financial(huidigBedrag);
         huidigAantal = huidigAantal - 1;
         huidigAantalTxt.textContent = huidigAantal;
+
+        orderErbij.classList.remove("none");
+        huidigTotaal = huidigTotaal - 2.50;
+        winkelmandBedrag.textContent = financial(huidigTotaal);
     }
 }
 toevoeg2.addEventListener("click", toevoegPr2);
@@ -769,11 +805,19 @@ function toevoegPr3() {
     if (firstClick3) {
         check3.classList.remove("none");
         toevoeg3.classList.add("text-color-pink");
-        firstClick3 = false;
         huidigBedrag = huidigBedrag + 4;
         bedragTxt.textContent = financial(huidigBedrag);
         huidigAantal = huidigAantal + 1;
         huidigAantalTxt.textContent = huidigAantal;
+
+        orderErbij.classList.remove("none");
+        huidigTotaal = huidigTotaal + 4;
+        winkelmandBedrag.textContent = financial(huidigTotaal);
+        erbijTxt.textContent = "Soju: Aardbei";
+        erbijFoto.src = "img/toevoeg-pr-3.png";
+
+        firstClick3 = false;
+
     } else {
         check3.classList.add("none");
         toevoeg3.classList.remove("text-color-pink");
@@ -781,6 +825,10 @@ function toevoegPr3() {
         bedragTxt.textContent = financial(huidigBedrag);
         huidigAantal = huidigAantal - 1;
         huidigAantalTxt.textContent = huidigAantal;
+
+        orderErbij.classList.add("none");
+        huidigTotaal = huidigTotaal - 4;
+        winkelmandBedrag.textContent = financial(huidigTotaal);
     }
 }
 toevoeg3.addEventListener("click", toevoegPr3);
@@ -793,11 +841,18 @@ function toevoegPr4() {
     if (firstClick4) {
         check4.classList.remove("none");
         toevoeg4.classList.add("text-color-pink");
-        firstClick4 = false;
         huidigBedrag = huidigBedrag + 1;
         bedragTxt.textContent = financial(huidigBedrag);
         huidigAantal = huidigAantal + 1;
         huidigAantalTxt.textContent = huidigAantal;
+
+        orderErbij.classList.remove("none");
+        huidigTotaal = huidigTotaal + 1;
+        winkelmandBedrag.textContent = financial(huidigTotaal);
+        erbijTxt.textContent = "Xiaoco ijs water";
+        erbijFoto.src = "img/toevoeg-pr-4.png";
+
+        firstClick4 = false;
         
     } else {
         check4.classList.add("none");
@@ -806,6 +861,10 @@ function toevoegPr4() {
         bedragTxt.textContent = financial(huidigBedrag);
         huidigAantal = huidigAantal - 1;
         huidigAantalTxt.textContent = huidigAantal;
+
+        orderErbij.classList.add("none");
+        huidigTotaal = huidigTotaal - 1;
+        winkelmandBedrag.textContent = financial(huidigTotaal);
         // Als je op het product klikt, gaat het bedrag en aantal naar de min. Dit zou niet moeten
     }
 }
@@ -816,6 +875,11 @@ function erbijPopUpWeg() {
     popUpWatErbij.classList.add("none");
 }
 gereedErbij.addEventListener("click", erbijPopUpWeg);
+
+function erbijCross() {
+    popUpWatErbij.classList.add("none");
+}
+crossErbij.addEventListener("click", erbijCross);
 
 // Merch
 merchClmn.classList.add("none");
@@ -951,3 +1015,19 @@ function merchToevoeg4() {
 }
 merch4.addEventListener("click", merchToevoeg4);
 // Op dit moment kan je alleen nog aanvinken en weg halen. Eigenlijk zou het moeten zijn dat je de hele tijd kan aanvinken en weg halen.
+
+// Winkelmand result
+winkelmandPopUp.classList.add("none");
+orderOreo.classList.add("none");
+orderXiaocoIjs.classList.add("none");
+orderErbij.classList.add("none");
+
+function showWinkelmand() {
+    winkelmandPopUp.classList.remove("none");
+}
+winkelmandBtn.addEventListener("click", showWinkelmand);
+
+function crossWinkelmand() {
+    winkelmandPopUp.classList.add("none");
+}
+winkelmandCross.addEventListener("click", crossWinkelmand);

@@ -273,7 +273,7 @@
             <h2 class="visually-hidden">Pop-up container</h2>
             <section class="pop-up-card">
                 <h2>Jouw Xiaoco Ijs</h2>
-                <button class="btn-cross"><img src="img/icon-plus.svg" alt="Icon plus"></button>
+                <button class="btn-cross" id="cross-xiaocoijs"><img src="img/icon-plus.svg" alt="Icon plus"></button>
                 <div class="gekozen-frame-card">
                     <img class="smaak" src="img/k-2-o-1.png" alt="Keuze 2">
                     <img class="gekozen" src="img/k-1-1.png" alt="Keuze 1">
@@ -306,7 +306,7 @@
             <h2 class="visually-hidden">Pop-up container</h2>
             <section class="pop-up-card">
                 <h2>Wat wil je erbij?</h2>
-                <button class="btn-cross"><img src="img/icon-plus.svg" alt="Icon plus"></button>
+                <button class="btn-cross" id="cross-erbij"><img src="img/icon-plus.svg" alt="Icon plus"></button>
                 <div class="jouw-product">
                     <div class="jouw-product-img">
                         <img class="smaak" src="img/k-2-o-1.png" alt="Keuze 2">
@@ -356,9 +356,9 @@
             <h2 class="visually-hidden">Pop-up container</h2>
             <section class="pop-up-card">
                 <h2>Jouw bestelling</h2>
-                <button class="btn-cross"><img src="img/icon-plus.svg" alt="Icon plus"></button>
+                <button class="btn-cross" id="cross-winkelmand"><img src="img/icon-plus.svg" alt="Icon plus"></button>
                
-                <section class="order-row">
+                <section class="order-row" id="order-oreo">
                     <h3 class="visually-hidden">Bestelling row</h3>
                     <div class="order-data">
                         <h3>Dagdeal: Oreo Ijs</h3>
@@ -374,9 +374,8 @@
                     </div>
                 </section>
 
-                <section class="order-row">
+                <section class="order-row" id="order-xiaocoijs">
                     <h3 class="visually-hidden">Bestelling row</h3>
-                    <!-- <div class="met-btn"> -->
                         <div class="order-data">
                             <h3>Je eigen Xiaoco Ijs</h3>
                             <p>3,50</p>
@@ -389,28 +388,36 @@
                             </div>
                             <button class="btn-bij-af ba-mini"><img src="img/icon-plus.svg" alt="Icon plus"></button>
                         </div>
-                        <button class="btn-4">go</button>
-                    <!-- </div> -->
-                    
+                        <button class="btn-4">Bewerken</button>
                 </section>
 
-
-
-
-
-
-
-
-
-
+                <section class="order-row" id="order-erbij">
+                    <h3 class="visually-hidden">Bestelling row</h3>
+                        <div class="order-data">
+                            <h3 id="erbijTxt">Boba: aardbei</h3>
+                            <p>3,-</p>
+                        </div>
+                        <img class="order-foto" id="erbij-foto" src="img/toevoeg-pr-1.png" alt="Oreo Special dagdeal">
+                        <div class="card-bij-af card-mini">
+                            <button class="btn-bij-af ba-mini"><img class="trash-change" src="img/icon-trash.svg" alt="Icon prullenbak"></button>
+                            <div class="card-aantal mini-aantal">
+                                <p>1</p>
+                            </div>
+                            <button class="btn-bij-af ba-mini"><img src="img/icon-plus.svg" alt="Icon plus"></button>
+                        </div>
+                        <button class="btn-4">Bewerken</button>
+                </section>
 
                 <div class="overlap"></div>
                 <div class="winkelmand-totaal">
-                    <p>Totaal:</p>
-                    <p>€3,50</p>
+                    <p class="totaal">Totaal:</p>
+                    <div>
+                        <p>€</p>
+                        <p id="totaal-bedrag">0</p>
+                    </div>
                 </div>
                 
-                <button id="gereed" class="btn-3">Gereed</button>
+                <button id="gereed" class="btn-3">Betalen</button>
             </section>
         </section>
     </main>
