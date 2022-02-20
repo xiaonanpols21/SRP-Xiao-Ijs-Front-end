@@ -986,6 +986,23 @@ footer {
     margin-top: 5px;
 }
 
+.winkelmand-bakje {
+    width: 50px;
+    height: fit-content;
+}
+
+.order-overflow {
+    height: 334px;
+    overflow: auto;
+}
+
+/* Merch pop-up */
+.merch-img-pop-up {
+    display: flex;
+    margin: auto;
+    height: 180px;
+}
+
 /* JS code */
 /* Footer knop links weg */
 .none {

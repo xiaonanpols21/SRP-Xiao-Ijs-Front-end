@@ -269,6 +269,7 @@
             <button id="bestellen-footer-btn" class="btn-2">Bestellen</button>
 
         </footer>
+
         <section class="pop-up xiaoco-ijs-result">
             <h2 class="visually-hidden">Pop-up container</h2>
             <section class="pop-up-card">
@@ -357,30 +358,14 @@
             <section class="pop-up-card">
                 <h2>Jouw bestelling</h2>
                 <button class="btn-cross" id="cross-winkelmand"><img src="img/icon-plus.svg" alt="Icon plus"></button>
-               
-                <section class="order-row" id="order-oreo">
-                    <h3 class="visually-hidden">Bestelling row</h3>
-                    <div class="order-data">
-                        <h3>Dagdeal: Oreo Ijs</h3>
-                        <p>2,50</p>
-                    </div>
-                    <img class="order-foto" src="img/special-dagdeal.png" alt="Oreo Special dagdeal">
-                    <div class="card-bij-af card-mini">
-                        <button class="btn-bij-af ba-mini"><img class="trash-change" src="img/icon-trash.svg" alt="Icon prullenbak"></button>
-                        <div class="card-aantal mini-aantal">
-                            <p>1</p>
-                        </div>
-                        <button class="btn-bij-af ba-mini"><img src="img/icon-plus.svg" alt="Icon plus"></button>
-                    </div>
-                </section>
-
-                <section class="order-row" id="order-xiaocoijs">
-                    <h3 class="visually-hidden">Bestelling row</h3>
+                <div class="order-overflow">
+                    <section class="order-row" id="order-oreo">
+                        <h3 class="visually-hidden">Bestelling row</h3>
                         <div class="order-data">
-                            <h3>Je eigen Xiaoco Ijs</h3>
-                            <p>3,50</p>
+                            <h3>Dagdeal: Oreo Ijs</h3>
+                            <p>2,50</p>
                         </div>
-                        <img class="order-foto" src="img/winkelmand-xiaocoijs.png" alt="Oreo Special dagdeal">
+                        <img class="order-foto" src="img/special-dagdeal.png" alt="Oreo Special dagdeal">
                         <div class="card-bij-af card-mini">
                             <button class="btn-bij-af ba-mini"><img class="trash-change" src="img/icon-trash.svg" alt="Icon prullenbak"></button>
                             <div class="card-aantal mini-aantal">
@@ -388,40 +373,135 @@
                             </div>
                             <button class="btn-bij-af ba-mini"><img src="img/icon-plus.svg" alt="Icon plus"></button>
                         </div>
-                        <button class="btn-4">Bewerken</button>
-                </section>
-
-                <section class="order-row" id="order-erbij">
-                    <h3 class="visually-hidden">Bestelling row</h3>
-                        <div class="order-data">
-                            <h3 id="erbijTxt">Boba: aardbei</h3>
-                            <p id="order-prijs">3,-</p>
-                        </div>
-                        <img class="order-foto" id="erbij-foto" src="img/toevoeg-pr-1.png" alt="Oreo Special dagdeal">
-                        <div class="card-bij-af card-mini">
-                            <button class="btn-bij-af ba-mini"><img class="trash-change" src="img/icon-trash.svg" alt="Icon prullenbak"></button>
-                            <div class="card-aantal mini-aantal">
-                                <p>1</p>
+                    </section>
+    
+                    <section class="order-row" id="order-xiaocoijs">
+                        <h3 class="visually-hidden">Bestelling row</h3>
+                            <div class="order-data">
+                                <h3>Je eigen Xiaoco Ijs</h3>
+                                <p>3,50</p>
                             </div>
-                            <button class="btn-bij-af ba-mini"><img src="img/icon-plus.svg" alt="Icon plus"></button>
-                        </div>
-                </section>
-
-                <section class="order-row" id="order-merch">
-                    <h3 class="visually-hidden">Bestelling row</h3>
-                        <div class="order-data">
-                            <h3 id="merchTxt">Tas voor ijs</h3>
-                            <p id="merch-prijs">2,50</p>
-                        </div>
-                        <img class="order-foto" id="merch-foto" src="img/toevoeg-pr-2.png" alt="Oreo Special dagdeal">
-                        <div class="card-bij-af card-mini">
-                            <button class="btn-bij-af ba-mini"><img class="trash-change" src="img/icon-trash.svg" alt="Icon prullenbak"></button>
-                            <div class="card-aantal mini-aantal">
-                                <p>1</p>
+                            <img class="order-foto" src="img/winkelmand-xiaocoijs.png" alt="Oreo Special dagdeal">
+                            <div class="card-bij-af card-mini">
+                                <button class="btn-bij-af ba-mini"><img class="trash-change" src="img/icon-trash.svg" alt="Icon prullenbak"></button>
+                                <div class="card-aantal mini-aantal">
+                                    <p>1</p>
+                                </div>
+                                <button class="btn-bij-af ba-mini"><img src="img/icon-plus.svg" alt="Icon plus"></button>
                             </div>
-                            <button class="btn-bij-af ba-mini"><img src="img/icon-plus.svg" alt="Icon plus"></button>
-                        </div>
-                </section>
+                            <button class="btn-4">Bewerken</button>
+                    </section>
+    
+                    <!-- Erbij -->
+                    <section class="order-row" id="erbij-boba">
+                        <h3 class="visually-hidden">Bestelling row</h3>
+                            <div class="order-data">
+                                <h3 id="erbijTxt">Boba: aardbei</h3>
+                                <p id="order-prijs">3,-</p>
+                            </div>
+                            <img class="order-foto" id="erbij-foto" src="img/toevoeg-pr-1.png" alt="Oreo Special dagdeal">
+                            <div class="card-bij-af card-mini">
+                                <button class="btn-bij-af ba-mini"><img class="trash-change" src="img/icon-trash.svg" alt="Icon prullenbak"></button>
+                                <div class="card-aantal mini-aantal">
+                                    <p>1</p>
+                                </div>
+                                <button class="btn-bij-af ba-mini"><img src="img/icon-plus.svg" alt="Icon plus"></button>
+                            </div>
+                    </section>
+                    <section class="order-row" id="erbij-soju">
+                        <h3 class="visually-hidden">Bestelling row</h3>
+                            <div class="order-data">
+                                <h3 id="erbijTxt">Soju: aardbei</h3>
+                                <p id="order-prijs">4,-</p>
+                            </div>
+                            <img class="order-foto" id="erbij-foto" src="img/toevoeg-pr-3.png" alt="Oreo Special dagdeal">
+                            <div class="card-bij-af card-mini">
+                                <button class="btn-bij-af ba-mini"><img class="trash-change" src="img/icon-trash.svg" alt="Icon prullenbak"></button>
+                                <div class="card-aantal mini-aantal">
+                                    <p>1</p>
+                                </div>
+                                <button class="btn-bij-af ba-mini"><img src="img/icon-plus.svg" alt="Icon plus"></button>
+                            </div>
+                    </section>
+                    <section class="order-row" id="erbij-water">
+                        <h3 class="visually-hidden">Bestelling row</h3>
+                            <div class="order-data">
+                                <h3 id="erbijTxt">Xiaoco Ijs water</h3>
+                                <p id="order-prijs">1,-</p>
+                            </div>
+                            <img class="order-foto" id="erbij-foto" src="img/toevoeg-pr-4.png" alt="Oreo Special dagdeal">
+                            <div class="card-bij-af card-mini">
+                                <button class="btn-bij-af ba-mini"><img class="trash-change" src="img/icon-trash.svg" alt="Icon prullenbak"></button>
+                                <div class="card-aantal mini-aantal">
+                                    <p>1</p>
+                                </div>
+                                <button class="btn-bij-af ba-mini"><img src="img/icon-plus.svg" alt="Icon plus"></button>
+                            </div>
+                    </section>
+    
+                    <!-- Merch -->
+                    <section class="order-row" id="merch-tas">
+                        <h3 class="visually-hidden">Bestelling row</h3>
+                            <div class="order-data">
+                                <h3 id="merchTxt">Tas voor ijs</h3>
+                                <p id="merch-prijs">2,50</p>
+                            </div>
+                            <img class="order-foto" id="merch-foto" src="img/toevoeg-pr-2.png" alt="Oreo Special dagdeal">
+                            <div class="card-bij-af card-mini">
+                                <button class="btn-bij-af ba-mini"><img class="trash-change" src="img/icon-trash.svg" alt="Icon prullenbak"></button>
+                                <div class="card-aantal mini-aantal">
+                                    <p>1</p>
+                                </div>
+                                <button class="btn-bij-af ba-mini"><img src="img/icon-plus.svg" alt="Icon plus"></button>
+                            </div>
+                    </section>
+                    <section class="order-row" id="merch-lepel">
+                        <h3 class="visually-hidden">Bestelling row</h3>
+                            <div class="order-data">
+                                <h3 id="merchTxt">Rubbere lepel</h3>
+                                <p id="merch-prijs">1,50</p>
+                            </div>
+                            <img class="order-foto" id="merch-foto" src="img/merch-2.png" alt="Oreo Special dagdeal">
+                            <div class="card-bij-af card-mini">
+                                <button class="btn-bij-af ba-mini"><img class="trash-change" src="img/icon-trash.svg" alt="Icon prullenbak"></button>
+                                <div class="card-aantal mini-aantal">
+                                    <p>1</p>
+                                </div>
+                                <button class="btn-bij-af ba-mini"><img src="img/icon-plus.svg" alt="Icon plus"></button>
+                            </div>
+                    </section>
+                    <section class="order-row" id="merch-hoorntje">
+                        <h3 class="visually-hidden">Bestelling row</h3>
+                            <div class="order-data">
+                                <h3 id="merchTxt">Rubber hoorntje</h3>
+                                <p id="merch-prijs">1,50</p>
+                            </div>
+                            <img class="order-foto" id="merch-foto" src="img/merch-3.png" alt="Oreo Special dagdeal">
+                            <div class="card-bij-af card-mini">
+                                <button class="btn-bij-af ba-mini"><img class="trash-change" src="img/icon-trash.svg" alt="Icon prullenbak"></button>
+                                <div class="card-aantal mini-aantal">
+                                    <p>1</p>
+                                </div>
+                                <button class="btn-bij-af ba-mini"><img src="img/icon-plus.svg" alt="Icon plus"></button>
+                            </div>
+                    </section>
+                    <section class="order-row" id="merch-bakje">
+                        <h3 class="visually-hidden">Bestelling row</h3>
+                            <div class="order-data">
+                                <h3 id="merchTxt">Rubber bakje</h3>
+                                <p id="merch-prijs">1,50</p>
+                            </div>
+                            <img class="order-foto winkelmand-bakje" id="merch-foto" src="img/s-1-5.png" alt="Oreo Special dagdeal">
+                            <div class="card-bij-af card-mini">
+                                <button class="btn-bij-af ba-mini"><img class="trash-change" src="img/icon-trash.svg" alt="Icon prullenbak"></button>
+                                <div class="card-aantal mini-aantal">
+                                    <p>1</p>
+                                </div>
+                                <button class="btn-bij-af ba-mini"><img src="img/icon-plus.svg" alt="Icon plus"></button>
+                            </div>
+                    </section>
+                </div>
+
 
                 <div class="overlap"></div>
                 <div class="winkelmand-totaal">
@@ -433,6 +513,24 @@
                 </div>
                 
                 <button id="gereed" class="btn-3">Betalen</button>
+            </section>
+        </section>
+
+        <section class="pop-up pop-merch-tas">
+            <h2 class="visually-hidden">Pop-up container</h2>
+            <section class="pop-up-card">
+                <h2>Tas voor ijs</h2>
+                <button class="btn-cross" id="cross-tas"><img src="img/icon-plus.svg" alt="Icon plus"></button>
+                <img class="merch-img-pop-up" src="img/toevoeg-pr-2.png" alt="Tas voor ijs">
+                <p>€2,50</p>
+                <div class="card-bij-af">
+                    <button class="btn-bij-af"><img class="trash-change" src="img/icon-trash.svg" alt="Icon prullenbak"></button>
+                    <div class="card-aantal">
+                        <p>1</p>
+                    </div>
+                    <button class="btn-bij-af"><img src="img/icon-plus.svg" alt="Icon plus"></button>
+                </div>
+                <button id="gereed-tas" class="btn-3">Gereed</button>
             </section>
         </section>
     </main>

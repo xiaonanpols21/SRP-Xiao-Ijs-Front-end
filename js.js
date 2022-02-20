@@ -136,12 +136,25 @@ var merch2 = document.querySelector("#merch-2");
 var merch3 = document.querySelector("#merch-3");
 var merch4 = document.querySelector("#merch-4");
 
+var merchToevoegTas = document.querySelector(".pop-merch-tas");
+var crossTas = document.querySelector("#cross-tas");
+var gereedTas = document.querySelector("#gereed-tas");
+
 // Winkelmand result
 var winkelmandPopUp = document.querySelector(".winkelmand-result");
 var winkelmandBedrag = document.querySelector("#totaal-bedrag");
 var huidigTotaal = 0;
 var orderOreo = document.querySelector("#order-oreo");
 var orderXiaocoIjs = document.querySelector("#order-xiaocoijs");
+
+var erbijBoba = document.querySelector("#erbij-boba");
+var erbijSoju = document.querySelector("#erbij-soju");
+var erbijWater = document.querySelector("#erbij-water");
+
+var merchTas = document.querySelector("#merch-tas");
+var merchLepel = document.querySelector("#merch-lepel");
+var merchHoorntje = document.querySelector("#merch-hoorntje");
+var merchBakje = document.querySelector("#merch-bakje");
 
 // ************************************************ //
 // Footer
@@ -737,6 +750,10 @@ function toevoegPr1() {
         huidigAantal = huidigAantal + 1;
         huidigAantalTxt.textContent = huidigAantal;
 
+        erbijBoba.classList.remove("none");
+        huidigTotaal = huidigTotaal + 3;
+        winkelmandBedrag.textContent = financial(huidigTotaal);
+
         firstClick1 = false;
     } else {
         check1.classList.add("none");
@@ -746,6 +763,10 @@ function toevoegPr1() {
         bedragTxt.textContent = financial(huidigBedrag);
         huidigAantal = huidigAantal - 1;
         huidigAantalTxt.textContent = huidigAantal;
+
+        erbijBoba.classList.add("none");
+        huidigTotaal = huidigTotaal - 3;
+        winkelmandBedrag.textContent = financial(huidigTotaal);
     }
 }
 toevoeg1.addEventListener("click", toevoegPr1);
@@ -763,6 +784,10 @@ function toevoegPr2() {
         huidigAantal = huidigAantal + 1;
         huidigAantalTxt.textContent = huidigAantal;
 
+        merchTas.classList.remove("none");
+        huidigTotaal = huidigTotaal + 2.50;
+        winkelmandBedrag.textContent = financial(huidigTotaal);
+
         firstClick2 = false;
     } else {
         check2.classList.add("none");
@@ -771,6 +796,10 @@ function toevoegPr2() {
         bedragTxt.textContent = financial(huidigBedrag);
         huidigAantal = huidigAantal - 1;
         huidigAantalTxt.textContent = huidigAantal;
+
+        merchTas.classList.add("none");
+        huidigTotaal = huidigTotaal - 2.50;
+        winkelmandBedrag.textContent = financial(huidigTotaal);
     }
 }
 toevoeg2.addEventListener("click", toevoegPr2);
@@ -789,6 +818,10 @@ function toevoegPr3() {
         huidigAantalTxt.textContent = huidigAantal;
         firstClick3 = false;
 
+        erbijSoju.classList.remove("none");
+        huidigTotaal = huidigTotaal + 4;
+        winkelmandBedrag.textContent = financial(huidigTotaal);
+
     } else {
         check3.classList.add("none");
         toevoeg3.classList.remove("text-color-pink");
@@ -796,6 +829,10 @@ function toevoegPr3() {
         bedragTxt.textContent = financial(huidigBedrag);
         huidigAantal = huidigAantal - 1;
         huidigAantalTxt.textContent = huidigAantal;
+
+        erbijSoju.classList.add("none");
+        huidigTotaal = huidigTotaal - 4;
+        winkelmandBedrag.textContent = financial(huidigTotaal);
     }
 }
 toevoeg3.addEventListener("click", toevoegPr3);
@@ -813,6 +850,10 @@ function toevoegPr4() {
         huidigAantal = huidigAantal + 1;
         huidigAantalTxt.textContent = huidigAantal;
 
+        erbijWater.classList.remove("none");
+        huidigTotaal = huidigTotaal + 1;
+        winkelmandBedrag.textContent = financial(huidigTotaal);
+
         firstClick4 = false;
         
     } else {
@@ -822,6 +863,10 @@ function toevoegPr4() {
         bedragTxt.textContent = financial(huidigBedrag);
         huidigAantal = huidigAantal - 1;
         huidigAantalTxt.textContent = huidigAantal;
+
+        erbijWater.classList.add("none");
+        huidigTotaal = huidigTotaal - 1;
+        winkelmandBedrag.textContent = financial(huidigTotaal);
         // Als je op het product klikt, gaat het bedrag en aantal naar de min. Dit zou niet moeten
     }
 }
@@ -878,106 +923,73 @@ function xiaocoIjsNav() {
 xiaocoIjsBtnNav.addEventListener("click", xiaocoIjsNav);
 
 // Merch toevoegen
-var merchFirst1 = true;
-var merchFirst2 = true;
-var merchFirst3 = true;
-var merchFirst4 = true;
+merchToevoegTas.classList.add("none");
 
+// function merchToevoeg1() {
+//     aantalPro.classList.remove("none");
+//     huidigXiaoIjs = huidigXiaoIjs + 1;
+//     aantalXiaoIjsTxt.textContent = huidigXiaoIjs;
+
+//     if (merchFirst1) {
+//         merch1.classList.add("keuze1Changed");
+//         huidigBedrag = huidigBedrag + 2.5;
+//         bedragTxt.textContent = financial(huidigBedrag);
+//         huidigAantal = huidigAantal + 1;
+//         huidigAantalTxt.textContent = huidigAantal;
+//     } else {
+//         merch1.classList.remove("keuze1Changed");
+//         huidigBedrag = huidigBedrag - 2.5;
+//         bedragTxt.textContent = financial(huidigBedrag);
+//         huidigAantal = huidigAantal - 1;
+//         huidigAantalTxt.textContent = huidigAantal;
+//     }
+// }
+// merch1.addEventListener("click", merchToevoeg1);
+
+// Tas
 function merchToevoeg1() {
+    merchToevoegTas.classList.remove("none");
+
     aantalPro.classList.remove("none");
     huidigXiaoIjs = huidigXiaoIjs + 1;
     aantalXiaoIjsTxt.textContent = huidigXiaoIjs;
 
-    if (merchFirst1) {
-        merch1.classList.add("keuze1Changed");
-        merchFirst1 = false;
-        huidigBedrag = huidigBedrag + 2.5;
-        bedragTxt.textContent = financial(huidigBedrag);
-        huidigAantal = huidigAantal + 1;
-        huidigAantalTxt.textContent = huidigAantal;
-    } else {
-        merch1.classList.remove("keuze1Changed");
-        huidigBedrag = huidigBedrag - 2.5;
-        bedragTxt.textContent = financial(huidigBedrag);
-        huidigAantal = huidigAantal - 1;
-        huidigAantalTxt.textContent = huidigAantal;
-    }
+    huidigBedrag = huidigBedrag + 2.5;
+    bedragTxt.textContent = financial(huidigBedrag);
+    huidigAantal = huidigAantal + 1;
+    huidigAantalTxt.textContent = huidigAantal;
 }
 merch1.addEventListener("click", merchToevoeg1);
 
-function merchToevoeg2() {
-    aantalPro.classList.remove("none");
-    huidigXiaoIjs = huidigXiaoIjs + 1;
-    aantalXiaoIjsTxt.textContent = huidigXiaoIjs;
+function tasCross() {
+    merchToevoegTas.classList.add("none");
 
-    if (merchFirst2) {
-        merch2.classList.add("keuze1Changed");
-        merchFirst2 = false;
-        huidigBedrag = huidigBedrag + 1.5;
-        bedragTxt.textContent = financial(huidigBedrag);
-        huidigAantal = huidigAantal + 1;
-        huidigAantalTxt.textContent = huidigAantal;
-
-    } else {
-        merch2.classList.remove("keuze1Changed");
-        huidigBedrag = huidigBedrag - 1.5;
-        bedragTxt.textContent = financial(huidigBedrag);
-        huidigAantal = huidigAantal - 1;
-        huidigAantalTxt.textContent = huidigAantal;
-    }
+    huidigBedrag = huidigBedrag - 2.5;
+    bedragTxt.textContent = financial(huidigBedrag);
+    huidigAantal = huidigAantal - 1;
+    huidigAantalTxt.textContent = huidigAantal;
 }
-merch2.addEventListener("click", merchToevoeg2);
+crossTas.addEventListener("click", tasCross);
 
-function merchToevoeg3() {
-    aantalPro.classList.remove("none");
-    huidigXiaoIjs = huidigXiaoIjs + 1;
-    aantalXiaoIjsTxt.textContent = huidigXiaoIjs;
-
-    if (merchFirst3) {
-        merch3.classList.add("keuze1Changed");
-        merchFirst3 = false;
-        huidigBedrag = huidigBedrag + 1.5;
-        bedragTxt.textContent = financial(huidigBedrag);
-        huidigAantal = huidigAantal + 1;
-        huidigAantalTxt.textContent = huidigAantal;
-    } else {
-        merch3.classList.remove("keuze1Changed");
-        huidigBedrag = huidigBedrag - 1.5;
-        bedragTxt.textContent = financial(huidigBedrag);
-        huidigAantal = huidigAantal - 1;
-        huidigAantalTxt.textContent = huidigAantal;
-    }
+function tasGereed() {
+    merchToevoegTas.classList.add("none");
+    merch1.classList.add("keuze1Changed");
 }
-merch3.addEventListener("click", merchToevoeg3);
-
-function merchToevoeg4() {
-    aantalPro.classList.remove("none");
-    huidigXiaoIjs = huidigXiaoIjs + 1;
-    aantalXiaoIjsTxt.textContent = huidigXiaoIjs;
-
-    if (merchFirst4) {
-        merch4.classList.add("keuze1Changed");
-        merchFirst4 = false;
-        huidigBedrag = huidigBedrag + 1.5;
-        bedragTxt.textContent = financial(huidigBedrag);
-        huidigAantal = huidigAantal + 1;
-        huidigAantalTxt.textContent = huidigAantal;
-    } else {
-        merch4.classList.remove("keuze1Changed");
-        huidigBedrag = huidigBedrag - 1.5;
-        bedragTxt.textContent = financial(huidigBedrag);
-        huidigAantal = huidigAantal - 1;
-        huidigAantalTxt.textContent = huidigAantal;
-        // Als je op het product klikt, gaat het bedrag en aantal naar de min. Dit zou niet moeten
-    }
-}
-merch4.addEventListener("click", merchToevoeg4);
-// Op dit moment kan je alleen nog aanvinken en weg halen. Eigenlijk zou het moeten zijn dat je de hele tijd kan aanvinken en weg halen.
+gereedTas.addEventListener("click", tasGereed);
 
 // Winkelmand result
 winkelmandPopUp.classList.add("none");
 orderOreo.classList.add("none");
 orderXiaocoIjs.classList.add("none");
+
+erbijBoba.classList.add("none");
+erbijSoju.classList.add("none");
+erbijWater.classList.add("none");
+
+merchTas.classList.add("none");
+merchLepel.classList.add("none");
+merchHoorntje.classList.add("none");
+merchBakje.classList.add("none");
 
 function showWinkelmand() {
     winkelmandPopUp.classList.remove("none");
