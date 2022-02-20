@@ -140,12 +140,8 @@ var merch4 = document.querySelector("#merch-4");
 var winkelmandPopUp = document.querySelector(".winkelmand-result");
 var winkelmandBedrag = document.querySelector("#totaal-bedrag");
 var huidigTotaal = 0;
-var erbijTxt = document.querySelector("#erbijTxt");
-var erbijFoto = document.querySelector("#erbij-foto");
-
 var orderOreo = document.querySelector("#order-oreo");
 var orderXiaocoIjs = document.querySelector("#order-xiaocoijs");
-var orderErbij = document.querySelector("#order-erbij");
 
 // ************************************************ //
 // Footer
@@ -741,10 +737,6 @@ function toevoegPr1() {
         huidigAantal = huidigAantal + 1;
         huidigAantalTxt.textContent = huidigAantal;
 
-        orderErbij.classList.remove("none");
-        huidigTotaal = huidigTotaal + 3;
-        winkelmandBedrag.textContent = financial(huidigTotaal);
-
         firstClick1 = false;
     } else {
         check1.classList.add("none");
@@ -754,10 +746,6 @@ function toevoegPr1() {
         bedragTxt.textContent = financial(huidigBedrag);
         huidigAantal = huidigAantal - 1;
         huidigAantalTxt.textContent = huidigAantal;
-
-        orderErbij.classList.add("none");
-        huidigTotaal = huidigTotaal - 3;
-        winkelmandBedrag.textContent = financial(huidigTotaal);
     }
 }
 toevoeg1.addEventListener("click", toevoegPr1);
@@ -775,12 +763,6 @@ function toevoegPr2() {
         huidigAantal = huidigAantal + 1;
         huidigAantalTxt.textContent = huidigAantal;
 
-        orderErbij.classList.remove("none");
-        huidigTotaal = huidigTotaal + 2.50;
-        winkelmandBedrag.textContent = financial(huidigTotaal);
-        erbijTxt.textContent = "Tas voor ijs";
-        erbijFoto.src = "img/toevoeg-pr-2.png";
-
         firstClick2 = false;
     } else {
         check2.classList.add("none");
@@ -789,10 +771,6 @@ function toevoegPr2() {
         bedragTxt.textContent = financial(huidigBedrag);
         huidigAantal = huidigAantal - 1;
         huidigAantalTxt.textContent = huidigAantal;
-
-        orderErbij.classList.remove("none");
-        huidigTotaal = huidigTotaal - 2.50;
-        winkelmandBedrag.textContent = financial(huidigTotaal);
     }
 }
 toevoeg2.addEventListener("click", toevoegPr2);
@@ -809,13 +787,6 @@ function toevoegPr3() {
         bedragTxt.textContent = financial(huidigBedrag);
         huidigAantal = huidigAantal + 1;
         huidigAantalTxt.textContent = huidigAantal;
-
-        orderErbij.classList.remove("none");
-        huidigTotaal = huidigTotaal + 4;
-        winkelmandBedrag.textContent = financial(huidigTotaal);
-        erbijTxt.textContent = "Soju: Aardbei";
-        erbijFoto.src = "img/toevoeg-pr-3.png";
-
         firstClick3 = false;
 
     } else {
@@ -825,10 +796,6 @@ function toevoegPr3() {
         bedragTxt.textContent = financial(huidigBedrag);
         huidigAantal = huidigAantal - 1;
         huidigAantalTxt.textContent = huidigAantal;
-
-        orderErbij.classList.add("none");
-        huidigTotaal = huidigTotaal - 4;
-        winkelmandBedrag.textContent = financial(huidigTotaal);
     }
 }
 toevoeg3.addEventListener("click", toevoegPr3);
@@ -846,12 +813,6 @@ function toevoegPr4() {
         huidigAantal = huidigAantal + 1;
         huidigAantalTxt.textContent = huidigAantal;
 
-        orderErbij.classList.remove("none");
-        huidigTotaal = huidigTotaal + 1;
-        winkelmandBedrag.textContent = financial(huidigTotaal);
-        erbijTxt.textContent = "Xiaoco ijs water";
-        erbijFoto.src = "img/toevoeg-pr-4.png";
-
         firstClick4 = false;
         
     } else {
@@ -861,10 +822,6 @@ function toevoegPr4() {
         bedragTxt.textContent = financial(huidigBedrag);
         huidigAantal = huidigAantal - 1;
         huidigAantalTxt.textContent = huidigAantal;
-
-        orderErbij.classList.add("none");
-        huidigTotaal = huidigTotaal - 1;
-        winkelmandBedrag.textContent = financial(huidigTotaal);
         // Als je op het product klikt, gaat het bedrag en aantal naar de min. Dit zou niet moeten
     }
 }
@@ -960,6 +917,7 @@ function merchToevoeg2() {
         bedragTxt.textContent = financial(huidigBedrag);
         huidigAantal = huidigAantal + 1;
         huidigAantalTxt.textContent = huidigAantal;
+
     } else {
         merch2.classList.remove("keuze1Changed");
         huidigBedrag = huidigBedrag - 1.5;
@@ -1020,7 +978,6 @@ merch4.addEventListener("click", merchToevoeg4);
 winkelmandPopUp.classList.add("none");
 orderOreo.classList.add("none");
 orderXiaocoIjs.classList.add("none");
-orderErbij.classList.add("none");
 
 function showWinkelmand() {
     winkelmandPopUp.classList.remove("none");
