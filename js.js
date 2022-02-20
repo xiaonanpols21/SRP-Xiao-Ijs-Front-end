@@ -140,6 +140,18 @@ var merchToevoegTas = document.querySelector(".pop-merch-tas");
 var crossTas = document.querySelector("#cross-tas");
 var gereedTas = document.querySelector("#gereed-tas");
 
+var merchToevoegLepel = document.querySelector(".pop-merch-lepel");
+var crossLepel = document.querySelector("#cross-lepel");
+var gereedLepel = document.querySelector("#gereed-lepel");
+
+var merchToevoegHoorntje = document.querySelector(".pop-merch-hoorntje");
+var crossHoorntje = document.querySelector("#cross-hoorntje");
+var gereedHoorntje = document.querySelector("#gereed-hoorntje");
+
+var merchToevoegBakje = document.querySelector(".pop-merch-bakje");
+var crossBakje = document.querySelector("#cross-bakje");
+var gereedBakje = document.querySelector("#gereed-bakje");
+
 // Winkelmand result
 var winkelmandPopUp = document.querySelector(".winkelmand-result");
 var winkelmandBedrag = document.querySelector("#totaal-bedrag");
@@ -924,27 +936,9 @@ xiaocoIjsBtnNav.addEventListener("click", xiaocoIjsNav);
 
 // Merch toevoegen
 merchToevoegTas.classList.add("none");
-
-// function merchToevoeg1() {
-//     aantalPro.classList.remove("none");
-//     huidigXiaoIjs = huidigXiaoIjs + 1;
-//     aantalXiaoIjsTxt.textContent = huidigXiaoIjs;
-
-//     if (merchFirst1) {
-//         merch1.classList.add("keuze1Changed");
-//         huidigBedrag = huidigBedrag + 2.5;
-//         bedragTxt.textContent = financial(huidigBedrag);
-//         huidigAantal = huidigAantal + 1;
-//         huidigAantalTxt.textContent = huidigAantal;
-//     } else {
-//         merch1.classList.remove("keuze1Changed");
-//         huidigBedrag = huidigBedrag - 2.5;
-//         bedragTxt.textContent = financial(huidigBedrag);
-//         huidigAantal = huidigAantal - 1;
-//         huidigAantalTxt.textContent = huidigAantal;
-//     }
-// }
-// merch1.addEventListener("click", merchToevoeg1);
+merchToevoegLepel.classList.add("none");
+merchToevoegHoorntje.classList.add("none");
+merchToevoegBakje.classList.add("none");
 
 // Tas
 function merchToevoeg1() {
@@ -974,8 +968,117 @@ crossTas.addEventListener("click", tasCross);
 function tasGereed() {
     merchToevoegTas.classList.add("none");
     merch1.classList.add("keuze1Changed");
+
+    merchTas.classList.remove("none");
+    huidigTotaal = huidigTotaal + 2.50;
+    winkelmandBedrag.textContent = financial(huidigTotaal);
 }
 gereedTas.addEventListener("click", tasGereed);
+
+// Lepel
+function merchToevoeg2() {
+    merchToevoegLepel.classList.remove("none");
+
+    aantalPro.classList.remove("none");
+    huidigXiaoIjs = huidigXiaoIjs + 1;
+    aantalXiaoIjsTxt.textContent = huidigXiaoIjs;
+
+    huidigBedrag = huidigBedrag + 1.5;
+    bedragTxt.textContent = financial(huidigBedrag);
+    huidigAantal = huidigAantal + 1;
+    huidigAantalTxt.textContent = huidigAantal;
+}
+merch2.addEventListener("click", merchToevoeg2);
+
+function lepelCross() {
+    merchToevoegLepel.classList.add("none");
+
+    huidigBedrag = huidigBedrag - 1.5;
+    bedragTxt.textContent = financial(huidigBedrag);
+    huidigAantal = huidigAantal - 1;
+    huidigAantalTxt.textContent = huidigAantal;
+}
+crossLepel.addEventListener("click", lepelCross);
+
+function lepelGereed() {
+    merchToevoegLepel.classList.add("none");
+    merch2.classList.add("keuze1Changed");
+
+    merchLepel.classList.remove("none");
+    huidigTotaal = huidigTotaal + 1.50;
+    winkelmandBedrag.textContent = financial(huidigTotaal);
+}
+gereedLepel.addEventListener("click", lepelGereed);
+
+// Hoorntje
+function merchToevoeg3() {
+    merchToevoegHoorntje.classList.remove("none");
+
+    aantalPro.classList.remove("none");
+    huidigXiaoIjs = huidigXiaoIjs + 1;
+    aantalXiaoIjsTxt.textContent = huidigXiaoIjs;
+
+    huidigBedrag = huidigBedrag + 1.5;
+    bedragTxt.textContent = financial(huidigBedrag);
+    huidigAantal = huidigAantal + 1;
+    huidigAantalTxt.textContent = huidigAantal;
+}
+merch3.addEventListener("click", merchToevoeg3);
+
+function hoorntjeCross() {
+    merchToevoegHoorntje.classList.add("none");
+
+    huidigBedrag = huidigBedrag - 1.5;
+    bedragTxt.textContent = financial(huidigBedrag);
+    huidigAantal = huidigAantal - 1;
+    huidigAantalTxt.textContent = huidigAantal;
+}
+crossHoorntje.addEventListener("click", hoorntjeCross);
+
+function hoorntjeGereed() {
+    merchToevoegHoorntje.classList.add("none");
+    merch3.classList.add("keuze1Changed");
+
+    merchHoorntje.classList.remove("none");
+    huidigTotaal = huidigTotaal + 1.50;
+    winkelmandBedrag.textContent = financial(huidigTotaal);
+}
+gereedHoorntje.addEventListener("click", hoorntjeGereed);
+
+// Bakje
+function merchToevoeg4() {
+    merchToevoegBakje.classList.remove("none");
+
+    aantalPro.classList.remove("none");
+    huidigXiaoIjs = huidigXiaoIjs + 1;
+    aantalXiaoIjsTxt.textContent = huidigXiaoIjs;
+
+    huidigBedrag = huidigBedrag + 1.5;
+    bedragTxt.textContent = financial(huidigBedrag);
+    huidigAantal = huidigAantal + 1;
+    huidigAantalTxt.textContent = huidigAantal;
+}
+merch4.addEventListener("click", merchToevoeg4);
+
+function bakjeCross() {
+    merchToevoegBakje.classList.add("none");
+
+    huidigBedrag = huidigBedrag - 1.5;
+    bedragTxt.textContent = financial(huidigBedrag);
+    huidigAantal = huidigAantal - 1;
+    huidigAantalTxt.textContent = huidigAantal;
+}
+crossBakje.addEventListener("click", bakjeCross);
+
+function bakjeGereed() {
+    merchToevoegBakje.classList.add("none");
+    merch4.classList.add("keuze1Changed");
+
+    merchBakje.classList.remove("none");
+    huidigTotaal = huidigTotaal + 1.50;
+    winkelmandBedrag.textContent = financial(huidigTotaal);
+}
+gereedBakje.addEventListener("click", bakjeGereed);
 
 // Winkelmand result
 winkelmandPopUp.classList.add("none");
