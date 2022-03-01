@@ -168,6 +168,11 @@ var merchLepel = document.querySelector("#merch-lepel");
 var merchHoorntje = document.querySelector("#merch-hoorntje");
 var merchBakje = document.querySelector("#merch-bakje");
 
+// Bestelling annuleren
+var annulerenInPopUp = document.querySelector(".bestelling-annuleren");
+var annulerenNee = document.querySelector("#annuleren-nee");
+var annulerenJa = document.querySelector("#annuleren-ja");
+
 // ************************************************ //
 // Footer
 btnStap1.classList.add("none");
@@ -1103,3 +1108,22 @@ function crossWinkelmand() {
     winkelmandPopUp.classList.add("none");
 }
 winkelmandCross.addEventListener("click", crossWinkelmand);
+
+// Bestelling annuleren
+annulerenInPopUp.classList.add("none");
+
+function annulerenPopUp() {
+    annulerenInPopUp.classList.remove("none");
+}
+annulerenBtn.addEventListener("click", annulerenPopUp);
+
+function annulerenNeebtn() {
+    annulerenInPopUp.classList.add("none");
+}
+annulerenNee.addEventListener("click", annulerenNeebtn);
+
+function annulerenJabtn() {
+    window.location = "index.html";
+    // Bron: https://stackoverflow.com/questions/13071967/adding-an-onclick-function-to-go-to-url-in-javascript
+}
+annulerenJa.addEventListener("click", annulerenJabtn);

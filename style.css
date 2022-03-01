@@ -1036,13 +1036,6 @@ footer {
 
 /* Responsive */
 @media only screen and (min-height: 900px) {
-    main {
-        height: 900px;
-        top: 50%;
-        left: 50%;
-        position: absolute;
-        transform: translate(-50%, -50%);
-    }
 
     /* Nav */
     nav ul li img:first-of-type {
