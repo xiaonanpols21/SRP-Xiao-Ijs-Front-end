@@ -173,6 +173,14 @@ var annulerenInPopUp = document.querySelector(".bestelling-annuleren");
 var annulerenNee = document.querySelector("#annuleren-nee");
 var annulerenJa = document.querySelector("#annuleren-ja");
 
+// Afrekenen
+var helpKids = document.querySelector(".sec-help-kids");
+var crossKids = document.querySelector("#cross-kids");
+var kidsNee = document.querySelector("#kids-nee");
+var kidsJa = document.querySelector("#kids-ja");
+
+var afrekenenPin = document.querySelector(".sec-afrekenen");
+
 // ************************************************ //
 // Footer
 btnStap1.classList.add("none");
@@ -1127,3 +1135,29 @@ function annulerenJabtn() {
     // Bron: https://stackoverflow.com/questions/13071967/adding-an-onclick-function-to-go-to-url-in-javascript
 }
 annulerenJa.addEventListener("click", annulerenJabtn);
+
+// Afrekenen
+helpKids.classList.add("none");
+afrekenenPin.classList.add("none");
+
+function helpKidsShow() {
+    helpKids.classList.remove("none");
+}
+bestelFtr.addEventListener("click", helpKidsShow);
+
+function kidsCross() {
+    helpKids.classList.add("none");
+}
+crossKids.addEventListener("click", kidsCross);
+
+function neeKids() {
+    helpKids.classList.add("none");
+    afrekenenPin.classList.remove("none");
+}
+kidsNee.addEventListener("click", neeKids);
+
+function jaKids() {
+    helpKids.classList.add("none");
+    afrekenenPin.classList.remove("none");
+}
+kidsJa.addEventListener("click", jaKids);

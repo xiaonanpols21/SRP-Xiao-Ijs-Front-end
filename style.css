@@ -775,9 +775,13 @@ footer {
     line-height: 30px;
 }
 
-.product-delete div {
+.product-delete div, .sec-help-kids div {
     display: flex;
     justify-content: space-between;
+}
+
+.product-delete div button, .sec-help-kids div button {
+    width: 130px;
 }
 
 /* Wat wil je erbij pop-up */
@@ -1006,6 +1010,21 @@ footer {
 .merch-bakje {
     width: 150px;
     height: fit-content;
+}
+
+/* Betalen */
+.betalen-img {
+    display: flex;
+    margin: auto;
+    height: 250px;
+}
+
+.sec-help-kids p, .sec-afrekenen p {
+    margin: 30px 0px;
+    font-size: 18px;
+    line-height: 30px;
+    text-align: center;
+    font-weight: normal;
 }
 
 /* JS code */
