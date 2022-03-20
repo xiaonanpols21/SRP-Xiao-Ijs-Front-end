@@ -1159,5 +1159,12 @@ kidsNee.addEventListener("click", neeKids);
 function jaKids() {
     helpKids.classList.add("none");
     afrekenenPin.classList.remove("none");
+    huidigBedrag = huidigBedrag + 0.50;
+    bedragTxt.textContent = financial(huidigBedrag);
+
+    huidigAantal = huidigAantal + 1;
+    huidigAantalTxt.textContent = huidigAantal;
+    aantalPro.classList.remove("none");
+
 }
 kidsJa.addEventListener("click", jaKids);
