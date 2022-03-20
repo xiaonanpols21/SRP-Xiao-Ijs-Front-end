@@ -1040,10 +1040,15 @@ footer {
     text-align: center;
     font-size: 24px;
     position: absolute;
-    bottom: 200px;
+    bottom: 220px;
     left: 50%;
     transform: translateX(-50%);
     width: fit-content;
+}
+
+.gif-end {
+    height: 300px;
+    top: 45%;
 }
 
 /* JS code */

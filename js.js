@@ -1153,6 +1153,10 @@ crossKids.addEventListener("click", kidsCross);
 function neeKids() {
     helpKids.classList.add("none");
     afrekenenPin.classList.remove("none");
+
+    setTimeout(function() {
+        window.location = 'bedankt.html';
+    }, 3000);
 }
 kidsNee.addEventListener("click", neeKids);
 
@@ -1165,6 +1169,11 @@ function jaKids() {
     huidigAantal = huidigAantal + 1;
     huidigAantalTxt.textContent = huidigAantal;
     aantalPro.classList.remove("none");
+
+    setTimeout(function() {
+        window.location = 'bedankt.html';
+    }, 3000);
+
 
 }
 kidsJa.addEventListener("click", jaKids);
