@@ -168,6 +168,13 @@ var merchLepel = document.querySelector("#merch-lepel");
 var merchHoorntje = document.querySelector("#merch-hoorntje");
 var merchBakje = document.querySelector("#merch-bakje");
 
+var bestelPopUp = document.querySelector("#bestelinPopUp");
+
+// Mini aantal
+var miniOreo = document.querySelector("#miniOreo p");
+var miniXiao = document.querySelector("#miniXiao p");
+var huidigMini = 0;
+
 // Bestelling annuleren
 var annulerenInPopUp = document.querySelector(".bestelling-annuleren");
 var annulerenNee = document.querySelector("#annuleren-nee");
@@ -225,6 +232,9 @@ function OreoPlus() {
     orderOreo.classList.remove("none");
     huidigTotaal = huidigTotaal + 2.50;
     winkelmandBedrag.textContent = financial(huidigTotaal);
+
+    huidigMini = huidigMini + 1;
+    miniOreo.textContent = huidigMini;
 }
 specialBtn.addEventListener("click", OreoPlus);
 
@@ -661,6 +671,12 @@ function XiaoPlus() {
     bedragTxt.textContent = financial(huidigBedrag);
     huidigAantal = huidigAantal + 1;
     huidigAantalTxt.textContent = huidigAantal;
+
+    huidigTotaal = huidigTotaal + 3.50;
+    winkelmandBedrag.textContent = financial(huidigTotaal);
+
+    huidigMini = huidigMini + 1;
+    miniXiao.textContent = huidigMini;
 }
 popUpPlus.addEventListener("click", XiaoPlus);
 
@@ -1144,6 +1160,7 @@ function helpKidsShow() {
     helpKids.classList.remove("none");
 }
 bestelFtr.addEventListener("click", helpKidsShow);
+bestelPopUp.addEventListener("click", helpKidsShow);
 
 function kidsCross() {
     helpKids.classList.add("none");
