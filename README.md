@@ -36,7 +36,7 @@ Wat zijn arrays?
 Een lijst. De lijst gebruikt []
 
 ### Functies
-= Wanneer de code wordt uitgevoerd. 
+Wanneer de code wordt uitgevoerd. 
 Je groepeert code als iets moet gebeuren wanneer je iets doet. Functie start schrijf je zo bijvoorbeeld: function groet() {}
 
 ### Eventlisteners
