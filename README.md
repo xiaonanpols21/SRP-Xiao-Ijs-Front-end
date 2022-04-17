@@ -56,6 +56,7 @@ Gebruikte code van anderen is geschreven op zijn plek met Bron: ... erbij.
 Volgende bronnen zijn gebruikte foto's.
 
 <details>
+
 1. https://www.wikiwand.com/en/Magnum_(ice_cream)
 2. https://www.magnumicecream.com/nl/campagnes/magnum-ruby.html
 3. https://www.unileverfoodsolutions.be/nl/product/magnum-your-way-vanilla-25-NL-878759.html
@@ -72,6 +73,7 @@ Volgende bronnen zijn gebruikte foto's.
 15. https://www.webstaurantstore.com/chopped-mms-ice-cream-topping-10-lb/711MMS.html
 16. Video: https://www.youtube.com/watch?v=tHmq-TCSEq8&ab_channel=a.k.a_sabby
 17. Video: https://www.youtube.com/watch?v=LeaX68U0vXA&ab_channel=BitelloOffVocal
+
 </details>
 
 ## Test video
