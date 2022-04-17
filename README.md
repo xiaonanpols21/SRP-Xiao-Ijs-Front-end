@@ -5,7 +5,6 @@ Dit is voor mijn SRP opdracht: Xiaoco Ijs werkend maken
 Hier zal ik mijn kennis opfrissen door de kennisclips terug te gaan kijken en de opdrachten maken. In de readme zal ik de aantekeningen maken. Gemaakte opdrachten zijn te zien in mapje: Inleiding programmeren.
 
 <details>
-
 ### Variabelen
 Variabelen = doos
 Doos heeft label, zodat je weet wat erin zit. 
@@ -47,7 +46,6 @@ Het is een conditioneel statement. We hebben ze zodat we conditie in code kunnen
 
 ### Parameters
 Parameter is belangrijke feature van functies. Parameters is zodat we code niet vaak hoeven te herschrijven. 
-
 </details>
 
 ## JS boek Duckett
@@ -56,8 +54,8 @@ Om JavaScript beter onder de knie te krijgen, maak ik oefeningen van het boek Du
 ## Bronnenlijst
 Gebruikte code van anderen is geschreven op zijn plek met Bron: ... erbij.
 Volgende bronnen zijn gebruikte foto's.
-<details>
 
+<details>
 1. https://www.wikiwand.com/en/Magnum_(ice_cream)
 2. https://www.magnumicecream.com/nl/campagnes/magnum-ruby.html
 3. https://www.unileverfoodsolutions.be/nl/product/magnum-your-way-vanilla-25-NL-878759.html
@@ -72,6 +70,11 @@ Volgende bronnen zijn gebruikte foto's.
 13. https://www.flaironline.nl/thuis/zo-smaakt-ijs-nog-lekkerder/
 14. https://indebuurt.nl/apeldoorn/eten-drinken/waar-in-apeldoorn-haal-je-het-beste-ijs~52427/ 
 15. https://www.webstaurantstore.com/chopped-mms-ice-cream-topping-10-lb/711MMS.html
-
-
+16. Video: https://www.youtube.com/watch?v=tHmq-TCSEq8&ab_channel=a.k.a_sabby
+17. Video: https://www.youtube.com/watch?v=LeaX68U0vXA&ab_channel=BitelloOffVocal
 </details>
+
+## Test video
+Hierbij heb ik een test filmpje gebruikt met een gebruiker. Notities zijn toegevoegd in de video voor verbetering en duidelijkheid. 
+
+https://youtu.be/u0pYboDsAqk
